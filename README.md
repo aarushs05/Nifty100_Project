@@ -3,22 +3,83 @@
 ## Sprint 1 – Data Foundation
 
 ### Project Overview
-This project builds an ETL pipeline for Nifty100 financial data. The pipeline loads 12 Excel datasets into a SQLite database (`nifty100.db`), validates the data using 16 data quality rules, and generates audit reports.
+This project builds an ETL pipeline for the Nifty100 financial dataset. The pipeline reads 12 Excel datasets, normalizes the data, validates quality rules, and loads the cleaned data into a SQLite database.
 
-### Team
-- Aarush Singh
+---
 
-### Tech Stack
-- Python
+## Technology Stack
+
+- Python 3.13
 - Pandas
 - SQLite
 - SQLAlchemy
 - Pytest
 - OpenPyXL
+- Loguru
 
-### Sprint 1 Deliverables
-- SQLite Database
-- ETL Pipeline
-- Data Validation
-- Unit Tests
-- Load Audit
+---
+
+## Sprint 1 Progress
+
+### ✅ Day 1 – Environment Setup
+
+- Project folder structure created
+- Virtual environment configured
+- Required libraries installed
+- Dataset organized
+- Configuration files created
+- Git initialized
+
+---
+
+### ✅ Day 2 – Excel Loader & Normalisation
+
+Implemented:
+
+- Automatic detection of all Excel files
+- Support for report-style Excel sheets
+- Automatic header detection
+- Data loading using Pandas
+- Company ID normalization
+- Year normalization
+- Text normalization
+- Logging using Loguru
+- Initial Pytest unit tests
+
+---
+
+## Project Structure
+
+```text
+Nifty100_Project/
+
+├── config/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── db/
+├── docs/
+├── logs/
+├── notebooks/
+├── output/
+├── src/
+│   ├── etl/
+│   ├── database/
+│   └── utils/
+├── tests/
+│   └── etl/
+├── .env
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Next Milestone
+
+Sprint 1 – Day 3
+
+- Data Quality Validation
+- DQ-01 to DQ-16
+- validation_failures.csv
+- SQLite schema
