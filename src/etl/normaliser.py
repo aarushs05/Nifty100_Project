@@ -33,6 +33,8 @@ def normalize_numeric(value):
     """Convert values to numeric where possible."""
     return pd.to_numeric(value, errors="coerce")
 
+def normalize_numeric(value):
+    return pd.to_numeric(value, errors="coerce")
 
 def normalize_year(value):
     """
