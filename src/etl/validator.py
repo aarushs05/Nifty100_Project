@@ -5,6 +5,13 @@ from dq_rules import (
     dq01_primary_key,
     dq02_company_year,
     dq03_foreign_key,
+    dq04_valid_year,
+    dq05_positive_market_cap,
+    dq06_financial_values,
+    dq07_positive_prices,
+    dq08_high_price,
+    dq09_low_price,
+    dq10_volume,
 )
 
 # ----------------------------
@@ -13,7 +20,15 @@ from dq_rules import (
 
 loader = ExcelLoader()
 datasets = loader.load_all()
+stock = datasets["stock_prices.xlsx"]
 
+invalid = stock[
+    (stock["high_price"] < stock["open_price"]) |
+    (stock["high_price"] < stock["close_price"]) |
+    (stock["high_price"] < stock["low_price"])
+]
+
+print(invalid.head(20))
 failures = []
 
 # ----------------------------
@@ -27,10 +42,10 @@ PK_DATASETS = {
     "sectors.xlsx",
     "stock_prices.xlsx",
 }
+
 COMPANY_YEAR_DATASETS = {
     "market_cap.xlsx",
 }
-
 
 FK_DATASETS = {
     "analysis.xlsx",
@@ -46,11 +61,8 @@ FK_DATASETS = {
     "stock_prices.xlsx",
 }
 
-# ----------------------------
-# Companies Reference Table
-# ----------------------------
-
 companies = datasets["companies.xlsx"]
+
 
 # ----------------------------
 # Execute Validation Rules
@@ -64,7 +76,7 @@ for name, df in datasets.items():
             dq01_primary_key(df, name)
         )
 
-    # DQ-02 Company + Year
+    # DQ-02 Duplicate Company + Year
     if name in COMPANY_YEAR_DATASETS:
         failures.extend(
             dq02_company_year(df, name)
@@ -80,16 +92,52 @@ for name, df in datasets.items():
             )
         )
 
+    # DQ-04 Valid Year
+    failures.extend(
+        dq04_valid_year(df, name)
+    )
+
+    # DQ-05 Positive Market Cap
+    failures.extend(
+        dq05_positive_market_cap(df, name)
+    )
+
+    # DQ-06 Financial Value Validation
+    failures.extend(
+        
+        dq06_financial_values(df, name)
+    )
+        # DQ-07 Positive Stock Prices
+    failures.extend(
+        dq07_positive_prices(df, name)
+    )
+
+    # DQ-08 High Price Validation
+    failures.extend(
+        dq08_high_price(df, name)
+    )
+
+    # DQ-09 Low Price Validation
+    failures.extend(
+        dq09_low_price(df, name)
+    )
+
+    # DQ-10 Volume Validation
+    failures.extend(
+        dq10_volume(df, name)
+    )
 # ----------------------------
 # Export Validation Report
 # ----------------------------
 
 failure_df = pd.DataFrame(failures)
-
+print("\nDQ-06 Failures")
+print(failure_df[failure_df["rule"] == "DQ-06"])
 failure_df.to_csv(
     "output/validation_failures.csv",
     index=False
 )
+
 # ----------------------------
 # Print Summary
 # ----------------------------
@@ -112,20 +160,3 @@ else:
 
     print("\nTop 10 Failures")
     print(failure_df.head(10))
-
-
-
-
-# from loader import ExcelLoader
-
-# loader = ExcelLoader()
-# datasets = loader.load_all()
-
-# df = datasets["financial_ratios.xlsx"]
-
-# print(
-#     df[
-#         (df["company_id"] == "ABB") &
-#         (df["year"] == 2024)
-#     ]
-# )

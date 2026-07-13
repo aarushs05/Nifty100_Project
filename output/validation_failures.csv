@@ -1,37 +1,157 @@
 rule,severity,dataset,row,message
-DQ-03,CRITICAL,analysis.xlsx,-,Invalid company_id: WIPRO
-DQ-03,CRITICAL,balancesheet.xlsx,-,Invalid company_id: ULTRACEMCO
-DQ-03,CRITICAL,balancesheet.xlsx,-,Invalid company_id: UNIONBANK
-DQ-03,CRITICAL,balancesheet.xlsx,-,Invalid company_id: UNITDSPR
-DQ-03,CRITICAL,balancesheet.xlsx,-,Invalid company_id: VEDL
-DQ-03,CRITICAL,balancesheet.xlsx,-,Invalid company_id: WIPRO
-DQ-03,CRITICAL,balancesheet.xlsx,-,Invalid company_id: ZOMATO
-DQ-03,CRITICAL,balancesheet.xlsx,-,Invalid company_id: ZYDUSLIFE
-DQ-03,CRITICAL,cashflow.xlsx,-,Invalid company_id: AGTL
-DQ-03,CRITICAL,cashflow.xlsx,-,Invalid company_id: ULTRACEMCO
-DQ-03,CRITICAL,cashflow.xlsx,-,Invalid company_id: UNIONBANK
-DQ-03,CRITICAL,cashflow.xlsx,-,Invalid company_id: UNITDSPR
-DQ-03,CRITICAL,cashflow.xlsx,-,Invalid company_id: VBL
-DQ-03,CRITICAL,cashflow.xlsx,-,Invalid company_id: VEDL
-DQ-03,CRITICAL,cashflow.xlsx,-,Invalid company_id: WIPRO
-DQ-03,CRITICAL,cashflow.xlsx,-,Invalid company_id: ZOMATO
-DQ-03,CRITICAL,cashflow.xlsx,-,Invalid company_id: ZYDUSLIFE
-DQ-03,CRITICAL,documents.xlsx,-,Invalid company_id: ULTRACEMCO
-DQ-03,CRITICAL,documents.xlsx,-,Invalid company_id: UNIONBANK
-DQ-03,CRITICAL,documents.xlsx,-,Invalid company_id: UNITDSPR
-DQ-03,CRITICAL,documents.xlsx,-,Invalid company_id: VBL
-DQ-03,CRITICAL,documents.xlsx,-,Invalid company_id: VEDL
-DQ-03,CRITICAL,documents.xlsx,-,Invalid company_id: WIPRO
-DQ-03,CRITICAL,documents.xlsx,-,Invalid company_id: ZOMATO
-DQ-03,CRITICAL,documents.xlsx,-,Invalid company_id: ZYDUSLIFE
-DQ-03,CRITICAL,financial_ratios.xlsx,-,Invalid company_id: ULTRACEMCO
-DQ-03,CRITICAL,financial_ratios.xlsx,-,Invalid company_id: UNIONBANK
-DQ-03,CRITICAL,profitandloss.xlsx,-,Invalid company_id: ULTRACEMCO
-DQ-03,CRITICAL,profitandloss.xlsx,-,Invalid company_id: UNIONBANK
-DQ-03,CRITICAL,profitandloss.xlsx,-,Invalid company_id: UNITDSPR
-DQ-03,CRITICAL,profitandloss.xlsx,-,Invalid company_id: VBL
-DQ-03,CRITICAL,profitandloss.xlsx,-,Invalid company_id: VEDL
-DQ-03,CRITICAL,profitandloss.xlsx,-,Invalid company_id: WIPRO
-DQ-03,CRITICAL,profitandloss.xlsx,-,Invalid company_id: ZOMATO
-DQ-03,CRITICAL,profitandloss.xlsx,-,Invalid company_id: ZYDUSLIFE
-DQ-03,CRITICAL,prosandcons.xlsx,-,Invalid company_id: WIPRO
+DQ-03,CRITICAL,analysis.xlsx,-,Company ID 'WIPRO' not found in companies.xlsx
+DQ-03,CRITICAL,balancesheet.xlsx,-,Company ID 'ULTRACEMCO' not found in companies.xlsx
+DQ-03,CRITICAL,balancesheet.xlsx,-,Company ID 'UNIONBANK' not found in companies.xlsx
+DQ-03,CRITICAL,balancesheet.xlsx,-,Company ID 'UNITDSPR' not found in companies.xlsx
+DQ-03,CRITICAL,balancesheet.xlsx,-,Company ID 'VEDL' not found in companies.xlsx
+DQ-03,CRITICAL,balancesheet.xlsx,-,Company ID 'WIPRO' not found in companies.xlsx
+DQ-03,CRITICAL,balancesheet.xlsx,-,Company ID 'ZOMATO' not found in companies.xlsx
+DQ-03,CRITICAL,balancesheet.xlsx,-,Company ID 'ZYDUSLIFE' not found in companies.xlsx
+DQ-03,CRITICAL,cashflow.xlsx,-,Company ID 'AGTL' not found in companies.xlsx
+DQ-03,CRITICAL,cashflow.xlsx,-,Company ID 'ULTRACEMCO' not found in companies.xlsx
+DQ-03,CRITICAL,cashflow.xlsx,-,Company ID 'UNIONBANK' not found in companies.xlsx
+DQ-03,CRITICAL,cashflow.xlsx,-,Company ID 'UNITDSPR' not found in companies.xlsx
+DQ-03,CRITICAL,cashflow.xlsx,-,Company ID 'VBL' not found in companies.xlsx
+DQ-03,CRITICAL,cashflow.xlsx,-,Company ID 'VEDL' not found in companies.xlsx
+DQ-03,CRITICAL,cashflow.xlsx,-,Company ID 'WIPRO' not found in companies.xlsx
+DQ-03,CRITICAL,cashflow.xlsx,-,Company ID 'ZOMATO' not found in companies.xlsx
+DQ-03,CRITICAL,cashflow.xlsx,-,Company ID 'ZYDUSLIFE' not found in companies.xlsx
+DQ-03,CRITICAL,documents.xlsx,-,Company ID 'ULTRACEMCO' not found in companies.xlsx
+DQ-03,CRITICAL,documents.xlsx,-,Company ID 'UNIONBANK' not found in companies.xlsx
+DQ-03,CRITICAL,documents.xlsx,-,Company ID 'UNITDSPR' not found in companies.xlsx
+DQ-03,CRITICAL,documents.xlsx,-,Company ID 'VBL' not found in companies.xlsx
+DQ-03,CRITICAL,documents.xlsx,-,Company ID 'VEDL' not found in companies.xlsx
+DQ-03,CRITICAL,documents.xlsx,-,Company ID 'WIPRO' not found in companies.xlsx
+DQ-03,CRITICAL,documents.xlsx,-,Company ID 'ZOMATO' not found in companies.xlsx
+DQ-03,CRITICAL,documents.xlsx,-,Company ID 'ZYDUSLIFE' not found in companies.xlsx
+DQ-03,CRITICAL,financial_ratios.xlsx,-,Company ID 'ULTRACEMCO' not found in companies.xlsx
+DQ-03,CRITICAL,financial_ratios.xlsx,-,Company ID 'UNIONBANK' not found in companies.xlsx
+DQ-03,CRITICAL,profitandloss.xlsx,-,Company ID 'ULTRACEMCO' not found in companies.xlsx
+DQ-03,CRITICAL,profitandloss.xlsx,-,Company ID 'UNIONBANK' not found in companies.xlsx
+DQ-03,CRITICAL,profitandloss.xlsx,-,Company ID 'UNITDSPR' not found in companies.xlsx
+DQ-03,CRITICAL,profitandloss.xlsx,-,Company ID 'VBL' not found in companies.xlsx
+DQ-03,CRITICAL,profitandloss.xlsx,-,Company ID 'VEDL' not found in companies.xlsx
+DQ-03,CRITICAL,profitandloss.xlsx,-,Company ID 'WIPRO' not found in companies.xlsx
+DQ-03,CRITICAL,profitandloss.xlsx,-,Company ID 'ZOMATO' not found in companies.xlsx
+DQ-03,CRITICAL,profitandloss.xlsx,-,Company ID 'ZYDUSLIFE' not found in companies.xlsx
+DQ-03,CRITICAL,prosandcons.xlsx,-,Company ID 'WIPRO' not found in companies.xlsx
+DQ-08,MAJOR,stock_prices.xlsx,31,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,76,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,84,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,103,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,130,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,145,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,195,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,254,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,343,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,467,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,727,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,734,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,854,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,896,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,973,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,1062,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,1117,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,1626,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,1708,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,1739,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,1896,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2068,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2325,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2419,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2505,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2551,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2577,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2691,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2848,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2902,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2967,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,2973,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,3030,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,3115,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,3267,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,3290,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,3341,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,3343,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,3881,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,3998,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4068,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4171,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4235,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4247,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4298,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4351,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4440,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4446,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4456,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4728,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4772,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,4794,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,5216,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,5376,High price is smaller than another day's price.
+DQ-08,MAJOR,stock_prices.xlsx,5386,High price is smaller than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,178,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,213,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,396,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,427,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,445,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,500,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,503,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,568,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,569,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,710,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,775,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,895,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1049,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1270,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1294,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1324,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1362,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1417,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1440,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1448,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1589,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1625,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1885,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,1940,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,2220,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,2270,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,2275,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,2311,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,2342,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,2434,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,2572,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,2709,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,2787,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3038,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3055,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3067,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3076,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3183,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3192,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3222,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3289,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3301,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3312,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3328,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3346,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3354,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3464,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3488,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3640,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3659,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3796,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3846,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,3951,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,4535,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,4556,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,4640,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,4695,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,4738,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,4739,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,4767,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,4820,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,5124,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,5342,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,5400,Low price is greater than another day's price.
+DQ-09,MAJOR,stock_prices.xlsx,5448,Low price is greater than another day's price.
