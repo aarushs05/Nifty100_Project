@@ -81,15 +81,19 @@ def populate():
         f"financial_ratios rows : {rows}"
     )
 
-    if rows >= 1100:
+    
+
+    expected_rows = len(ratios)
+
+    if rows == expected_rows:
 
         print("PASS ✓")
 
     else:
 
-        print("WARNING : Row count below target")
-
-    print("=" * 50)
+        print(
+            f"WARNING: Expected {expected_rows} rows but found {rows}"
+        )
 
     db.close()
 

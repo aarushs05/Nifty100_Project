@@ -29,7 +29,15 @@ class SQLiteDB:
     # =====================================================
     # Read Table
     # =====================================================
+    def read_table(self, table_name):
 
+        return self.table(table_name)
+    
+    
+    def get_connection():
+
+        return sqlite3.connect(DATABASE)
+    
     def table(self, table_name):
 
         query = f"SELECT * FROM {table_name}"

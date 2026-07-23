@@ -12,10 +12,12 @@ import logging
 
 import pandas as pd
 
-from src.database.sqlite import SQLiteDB
-
 from src.analytics.ratios import (
     net_profit_margin,
+    net_profit_margin,
+    operating_profit_margin,
+    return_on_equity,
+    return_on_capital_employed,
     operating_profit_margin,
     return_on_equity,
     return_on_capital_employed,
@@ -31,8 +33,10 @@ from src.analytics.ratios import (
     check_opm_difference,
     check_roce_difference,
     check_roe_difference,
-    ebit
+    ebit,
 )
+from src.database.sqlite import SQLiteDB
+
 
 from src.analytics.cashflow_kpis import (
     compute_cashflow_metrics
@@ -99,9 +103,9 @@ class RatioEngine:
         self.pnl = self.pnl[self.pnl["year"] != "TTM"].copy()
 
         self.pnl["year"] = pd.to_numeric(
-        self.pnl["year"],
-        errors="coerce"
-    )
+            self.pnl["year"],
+             errors="coerce"
+        )
 
         self.pnl = self.pnl.dropna(subset=["year"])
 
@@ -111,19 +115,19 @@ class RatioEngine:
 
     # Keep only required columns
         pnl = self.pnl[
-        [
-            "company_id",
-            "year",
-            "sales",
-            "operating_profit",
-            "opm_percentage",
-            "other_income",
-            "interest",
-            "net_profit",
-            "eps",
-            "dividend_payout"
+            [
+                "company_id",
+                "year",
+                "sales",
+                "operating_profit",
+                "opm_percentage",
+                "other_income",
+                "interest",
+                "net_profit",
+                "eps",
+                "dividend_payout"
+            ]
         ]
-    ]
 
         bs = self.bs[
         [
@@ -138,42 +142,60 @@ class RatioEngine:
     ]
 
         cf = self.cf[
-        [
-            "company_id",
-            "year",
-            "operating_activity",
-            "investing_activity",
-            "financing_activity"
+         [
+                "company_id",
+                "year",
+                "operating_activity",
+                "investing_activity",
+                "financing_activity"
+            ]
+        ]
+
+        company = self.company[
+            [
+                "id",
+                "book_value",
+                "roce_percentage",
+                "roe_percentage"
+             ]
+    ]
+
+        sector = self.sector[
+            [
+                "company_id",
+                "broad_sector"
         ]
     ]
 
-        company = self.company[
-        [
-            "id",
-            "book_value",
-            "roce_percentage",
-            "roe_percentage"
-        ]
-        ]
-
-        sector = self.sector[
-        [
-            "company_id",
-            "broad_sector"
-        ]
-        ]
-
+    # Merge tables     
         df = pnl.merge(bs, on=["company_id", "year"])
+        print("After pnl + bs :", len(df))
+
         df = df.merge(cf, on=["company_id", "year"])
+        print("After + cashflow :", len(df))
+
         df = df.merge(company, left_on="company_id", right_on="id")
+        print("After + companies :", len(df))
+
         df = df.drop(columns=["id"])
+
         df = df.merge(sector, on="company_id")
+        print("After + sectors :", len(df))
+
+        duplicates = (
+            df.groupby(["company_id", "year"])
+               .size()
+               .reset_index(name="count")
+         )
+
+        print("\nDuplicates after merged_dataframe():")
+        print(duplicates[duplicates["count"] > 1].head(20))
 
         return df
     # ======================================================
     # Compute Ratios
     # ======================================================
-
+    
     def compute(self):
 
         df = self.merged_dataframe()
@@ -229,6 +251,17 @@ class RatioEngine:
                 row.reserves
 
             )
+            if company == "BEL":
+                print("\n====================")
+                print("Company :", company)
+                print("Year    :", year)
+                print("Net Profit      :", row.net_profit)
+                print("Equity Capital  :", row.equity_capital)
+                print("Reserves        :", row.reserves)
+                print("Borrowings      :", row.borrowings)
+                print("Total Assets    :", row.total_assets)
+                print("Calculated ROE  :", roe)
+                print("====================\n")
 
             roce = return_on_capital_employed(
 
@@ -470,9 +503,21 @@ class RatioEngine:
     # Run Engine
     # ======================================================
 
+    
+
     def run(self):
 
         ratios = self.compute()
+
+        print("Rows after compute:", len(ratios))
+
+        print(
+            ratios.groupby(["company_id", "year"])
+                  .size()
+                  .reset_index(name="count")
+                  .query("count > 1")
+                  .head(20)
+        )
 
         cagr = self.compute_cagr()
 

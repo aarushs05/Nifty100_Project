@@ -1,0 +1,20 @@
+filters:
+
+  roe:
+    min: 15
+
+  roce:
+    min: 15
+
+  debt_to_equity:
+    max: 1.0
+
+weights:
+
+  roe: 30
+
+  roce: 30
+
+  revenue_growth: 20
+
+  eps_growth: 20

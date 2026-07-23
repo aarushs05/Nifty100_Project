@@ -1,0 +1,27 @@
+company_id,company_name,broad_sector,sub_sector,market_cap_category,year,return_on_equity_pct,return_on_capital_employed_pct,net_profit_margin_pct,operating_profit_margin_pct,debt_to_equity,interest_coverage,market_cap_crore,pe_ratio,pb_ratio,dividend_yield_pct,composite_quality_score,quality_rank,valuation_score
+M&M,"Mahindra & Mahindra Ltd
+",Consumer Discretionary,Automobiles,Large Cap,2024,18.54,16.12,8.82,17.9,1.64,3.76,4173085.48,14.22,0.81,2.37,50,38.883895131086135,84.22222222222223
+LT,Larsen & Toubro Ltd,Industrials,Engineering & Construction,Large Cap,2024,77.67,152.62,7.03,13.51,0.1,3.54,1124597.5,30.8,2.48,1.26,75,72.70037453183521,83.88888888888889
+BAJAJFINSV,Bajaj Finserv Ltd,Financials,Diversified Financials,Large Cap,2024,25.85,11.71,14.13,37.04,4.79,2.2,1905112.17,15.07,6.08,2.56,50,39.68913857677903,76.83333333333334
+INDUSINDBK,IndusInd Bank Ltd,Financials,Private Banks,Large Cap,2024,14.25,3.56,19.56,38.55,6.89,1.88,1807433.12,8.99,3.7,1.42,25,27.580524344569287,76.44444444444444
+IOC,"Indian Oil Corporation
+",Energy,Oil & Gas Refining,Mid Cap,2024,23.53,25.64,5.56,9.74,0.72,10.28,1418164.33,28.61,4.24,1.25,75,56.023408239700366,75.55555555555556
+BEL,Bharat Electronics Ltd,Industrials,Defence Electronics,Large Cap,2024,4744.05,4504.72,19.66,24.92,0.51,476.75,1354781.06,17.89,9.22,0.76,100,80.30243445692885,75.22222222222223
+MOTHERSON,Samvardhana Motherson International Ltd,Consumer Discretionary,Auto Ancillaries,Large Cap,2024,11.55,20.54,3.06,9.45,0.76,5.22,146151.16,9.54,2.38,2.18,50,40.140449438202246,73.66666666666666
+BANKBARODA,Bank of Baroda,Financials,Public Sector Banks,Large Cap,2024,15.76,2.82,15.94,37.49,12.14,1.9,590971.02,16.89,4.15,2.62,50,27.676029962546814,73.33333333333334
+IRFC,Indian Railway Finance Corporation Ltd,Financials,Speciality Finance,Large Cap,2024,13.04,5.75,24.06,99.5,8.38,1.32,2618348.58,9.81,3.91,2.82,25,34.88014981273408,72.22222222222221
+TATAPOWER,"Tata Power Company Ltd
+",Energy,Power & Utilities,Mid Cap,2024,13.23,16.45,6.97,17.47,1.66,3.05,1647269.48,14.5,3.48,0.49,25,39.99812734082397,72.11111111111111
+TITAN,"Titan Company Ltd
+",Consumer Discretionary,Gems & Jewellery,Large Cap,2024,37.22,23.38,6.84,10.36,1.65,9.41,1793769.72,10.13,10.51,3.1,50,50.09737827715356,69.77777777777777
+TRENT,Trent Ltd,Consumer Discretionary,Retail,Large Cap,2024,36.31,50.85,11.94,15.93,0.43,8.04,571322.04,8.65,11.82,3.46,100,65.50561797752809,69.55555555555556
+LICI,Life Insurance Corporation of India,Financials,Life Insurance,Large Cap,2024,49.45,57.53,4.84,3.87,0.0,371.94,183583.67,30.67,8.1,3.77,75,68.73408239700375,69.22222222222221
+RECLTD,REC Ltd,Financials,Speciality Finance,Large Cap,2024,20.4,9.31,29.77,100.77,6.42,1.6,291917.42,31.49,4.59,2.18,50,41.337078651685395,68.88888888888889
+ITC,"ITC Ltd
+",Consumer Staples,Diversified FMCG,Large Cap,2024,27.85,38.81,29.28,37.02,0.0,362.96,332245.58,47.85,3.24,4.26,100,75.43445692883896,68.11111111111111
+PNB,Punjab National Bank,Financials,Public Sector Banks,Large Cap,2024,61.32,,8.4,,3.68,,1825925.6,19.29,10.91,1.32,25,,67.33333333333333
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Financials,Private Banks,Large Cap,2024,14.01,7.23,32.39,83.67,4.0,1.24,430223.52,32.9,1.15,1.51,25,37.7752808988764,67.00000000000001
+ICICIBANK,ICICI Bank Ltd,Financials,Private Banks,Large Cap,2024,17.99,5.22,28.89,62.41,6.45,1.3,1319221.86,25.76,6.2,3.43,50,49.93258426966292,66.88888888888889
+DRREDDY,Dr Reddys Laboratories Ltd,Healthcare,Pharmaceuticals,Mid Cap,2024,19.74,29.22,19.91,28.32,0.07,51.71,2441803.28,11.73,10.19,0.09,100,61.261235955056186,63.33333333333334
+PFC,Power Finance Corporation Ltd,Financials,Speciality Finance,Large Cap,2024,26.16,3.49,28.92,36.69,8.52,0.58,2011885.81,35.6,6.59,0.42,50,39.5187265917603,63.0

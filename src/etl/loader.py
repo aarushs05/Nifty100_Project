@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 from loguru import logger
-from etl.normaliser import normalize_dataframe
+from src.etl.normaliser import normalize_dataframe
 
 DATA_PATH = "data/raw"
 

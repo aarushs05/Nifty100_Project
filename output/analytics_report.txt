@@ -1,0 +1,70 @@
+================================================================================
+NIFTY 100 ANALYTICS REPORT
+================================================================================
+
+Generated : 2026-07-22 17:01:46.153515
+
+Companies Analysed : 90
+Sectors Analysed   : 10
+
+================================================================================
+TOP 10 COMPANIES
+================================================================================
+Interglobe Aviation Ltd | ROE=892.57% | ROCE=5643.45% | Quality=86.50
+Bharat Electronics Ltd | ROE=4744.05% | ROCE=4504.72% | Quality=80.30
+Hindustan Aeronautics Ltd | ROE=3816.58% | ROCE=3617.39% | Quality=80.02
+Nestle India Ltd | ROE=117.75% | ROCE=162.06% | Quality=78.15
+Coal India Ltd | ROE=45.17% | ROCE=105.75% | Quality=75.61
+Abbott India Ltd | ROE=32.47% | ROCE=44.98% | Quality=75.53
+ITC Ltd
+ | ROE=27.85% | ROCE=38.81% | Quality=75.43
+Tata Consultancy Services Ltd | ROE=50.94% | ROCE=68.78% | Quality=75.35
+Indian Railway Catering & Tourism Corporation Ltd | ROE=34.40% | ROCE=47.78% | Quality=75.14
+Hindustan Unilever Ltd
+ | ROE=20.07% | ROCE=89.68% | Quality=72.74
+
+================================================================================
+TOP SECTORS
+================================================================================
+Information Technology | Avg Quality=63.40
+Consumer Discretionary | Avg Quality=59.59
+Consumer Staples | Avg Quality=57.24
+Healthcare | Avg Quality=56.99
+Industrials | Avg Quality=54.01
+Materials | Avg Quality=48.70
+Energy | Avg Quality=47.20
+Financials | Avg Quality=40.44
+Communication Services | Avg Quality=38.62
+Real Estate | Avg Quality=36.32
+
+================================================================================
+BEST VALUATION PICKS
+================================================================================
+Mahindra & Mahindra Ltd
+ | PE=14.22 | PB=0.81 | Score=84.22
+Larsen & Toubro Ltd | PE=30.80 | PB=2.48 | Score=83.89
+Bajaj Finserv Ltd | PE=15.07 | PB=6.08 | Score=76.83
+IndusInd Bank Ltd | PE=8.99 | PB=3.70 | Score=76.44
+Indian Oil Corporation
+ | PE=28.61 | PB=4.24 | Score=75.56
+Bharat Electronics Ltd | PE=17.89 | PB=9.22 | Score=75.22
+Samvardhana Motherson International Ltd | PE=9.54 | PB=2.38 | Score=73.67
+Bank of Baroda | PE=16.89 | PB=4.15 | Score=73.33
+Indian Railway Finance Corporation Ltd | PE=9.81 | PB=3.91 | Score=72.22
+Tata Power Company Ltd
+ | PE=14.50 | PB=3.48 | Score=72.11
+
+================================================================================
+LOWEST RISK COMPANIES
+================================================================================
+Bajaj Holdings & Investment Ltd | Debt=0.00 | Interest=3764.50
+Divis Laboratories Ltd | Debt=0.00 | Interest=636.25
+Life Insurance Corporation of India | Debt=0.00 | Interest=371.94
+ITC Ltd
+ | Debt=0.00 | Interest=362.96
+SBI Life Insurance Company Ltd | Debt=0.00 | Interest=240.33
+Jio Financial Services Ltd | Debt=0.00 | Interest=198.80
+ICICI Lombard General Insurance Company Ltd | Debt=0.00 | Interest=160.03
+Maruti Suzuki India Ltd | Debt=0.00 | Interest=117.91
+Bosch Ltd | Debt=0.00 | Interest=71.78
+Abbott India Ltd | Debt=0.02 | Interest=141.75

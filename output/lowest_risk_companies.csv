@@ -1,0 +1,25 @@
+company_id,company_name,broad_sector,sub_sector,market_cap_category,year,return_on_equity_pct,return_on_capital_employed_pct,net_profit_margin_pct,operating_profit_margin_pct,debt_to_equity,interest_coverage,market_cap_crore,pe_ratio,pb_ratio,dividend_yield_pct,composite_quality_score,quality_rank,risk_score
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Financials,Holding Companies,Large Cap,2024,13.58,13.86,432.73,91.77,0.0,3764.5,2191568.13,37.73,9.38,3.37,50,51.812734082397,3.333333333333333
+DIVISLAB,Divis Laboratories Ltd,Healthcare,Pharmaceuticals,Large Cap,2024,11.79,18.75,20.4,28.17,0.0,636.25,1615028.67,69.95,12.34,1.39,75,49.88108614232209,4.232209737827717
+LICI,Life Insurance Corporation of India,Financials,Life Insurance,Large Cap,2024,49.45,57.53,4.84,3.87,0.0,371.94,183583.67,30.67,8.1,3.77,75,68.73408239700375,5.131086142322097
+ITC,"ITC Ltd
+",Consumer Staples,Diversified FMCG,Large Cap,2024,27.85,38.81,29.28,37.02,0.0,362.96,332245.58,47.85,3.24,4.26,100,75.43445692883896,5.580524344569289
+SBILIFE,SBI Life Insurance Company Ltd,Financials,Life Insurance,Large Cap,2024,12.7,14.51,1.43,0.19,0.0,240.33,886097.71,69.98,9.48,1.62,25,47.32209737827716,6.479400749063669
+JIOFIN,Jio Financial Services Ltd,Financials,Diversified Financials,Mid Cap,2024,1.15,1.43,86.52,84.04,0.0,198.8,1401774.99,34.24,9.91,3.09,50,33.11423220973783,6.928838951310861
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Financials,General Insurance,Large Cap,2024,15.72,146.43,9.37,87.42,0.0,160.03,1271789.21,49.0,7.86,3.46,75,65.33614232209739,8.277153558052433
+MARUTI,Maruti Suzuki India Ltd,Consumer Discretionary,Automobiles,Mid Cap,2024,15.75,26.67,9.51,13.13,0.0,117.91,1503863.63,20.78,8.26,1.78,75,58.532771535580515,9.62546816479401
+BOSCHLTD,Bosch Ltd,Consumer Discretionary,Auto Ancillaries,Large Cap,2024,20.64,30.25,14.89,12.52,0.0,71.78,2599556.05,58.43,6.47,4.23,100,62.29213483146068,12.322097378277153
+ABB,Abbott India Ltd,Industrials,Capital Goods,Large Cap,2024,32.47,44.98,20.53,24.84,0.02,141.75,1536236.24,75.58,4.48,0.96,100,75.52715355805243,14.726591760299627
+EICHERMOT,Eicher Motors Ltd,Consumer Discretionary,Two Wheelers,Large Cap,2024,22.17,31.68,24.2,26.18,0.02,114.71,222391.83,15.62,13.61,4.41,100,68.27059925093633,16.074906367041198
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Consumer Discretionary,Travel & Tourism,Mid Cap,2024,34.4,47.78,26.02,34.33,0.02,82.74,1258520.29,60.44,5.74,1.08,100,75.14138576779027,17.423220973782776
+SIEMENS,Siemens Ltd,Industrials,Capital Goods,Large Cap,2024,17.7,25.77,12.22,13.96,0.02,67.15,1191331.95,33.32,9.25,3.69,100,55.168539325842694,18.771535580524343
+HDFCLIFE,HDFC Life Insurance Company Ltd,Financials,Life Insurance,Large Cap,2024,10.73,646.47,1.55,99.48,0.06,192.29,47027.6,50.59,11.28,3.22,50,56.87640449438202,20.04494382022472
+DMART,Avenue Supermarts Ltd,Consumer Discretionary,Retail,Large Cap,2024,13.56,22.04,4.99,8.08,0.03,73.29,3053088.97,72.53,11.71,1.94,50,45.618913857677896,21.20599250936329
+BAJAJ-AUTO,Bajaj Auto Ltd,Consumer Discretionary,Two Wheelers,Large Cap,2024,26.61,33.9,17.18,19.53,0.07,174.42,653817.3,29.91,9.83,3.59,100,66.94662921348313,21.49438202247191
+NAUKRI,Info Edge (India) Ltd,Communication Services,Internet & Platforms,Large Cap,2024,1.97,3.32,23.46,28.04,0.01,28.97,563824.44,32.88,8.33,4.29,50,36.571161048689135,21.49812734082397
+CIPLA,"Cipla Ltd
+",Healthcare,Pharmaceuticals,Large Cap,2024,15.55,71.55,16.12,75.59,0.02,35.34,439803.15,59.75,5.93,0.12,100,63.87921348314606,22.816479400749067
+HINDUNILVR,"Hindustan Unilever Ltd
+",Consumer Staples,FMCG,Mid Cap,2024,20.07,89.68,16.61,76.32,0.03,57.85,548890.59,34.51,11.88,4.32,100,72.74344569288391,23.00374531835206
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Consumer Discretionary,Two Wheelers,Large Cap,2024,21.14,177.92,9.9,86.15,0.03,47.27,1593400.88,53.86,12.6,1.91,75,71.2621722846442,24.352059925093634
