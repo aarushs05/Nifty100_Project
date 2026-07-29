@@ -6,13 +6,14 @@ A comprehensive financial analytics platform built using Python, SQLite, SQL, an
 
 # 📌 Project Overview
 
-The project is divided into multiple development sprints. The first three sprints establish a complete analytics pipeline starting from raw financial datasets and ending with intelligent stock screening and peer comparison.
+The project is divided into multiple development sprints. The project is divided into development sprints. Together, these sprints build a complete financial analytics platform—from raw financial datasets and automated ETL to ratio computation, stock screening, peer comparison, and an interactive Streamlit dashboard for visualization and reporting. starting from raw financial datasets and ending with intelligent stock screening and peer comparison.
 
 ---
 
 # 🏗️ Technology Stack
-
 - Python 3.13
+- Streamlit
+- Plotly
 - Pandas
 - NumPy
 - SQLite
@@ -21,7 +22,6 @@ The project is divided into multiple development sprints. The first three sprint
 - PyYAML
 - OpenPyXL
 - Loguru
-
 ---
 
 # 📁 Project Structure
@@ -41,14 +41,17 @@ Nifty100_Project/
 │   ├── screener_output.xlsx
 │   ├── peer_percentiles.xlsx
 │   └── reports
-│
-├── src/
-│   ├── analysis/
-│   ├── analytics/
-│   ├── database/
-│   ├── etl/
-│   ├── screener/
-│   └── utils/
+│src/
+├── analysis/
+├── analytics/
+├── dashboard/
+│   ├── app.py
+│   ├── utils/
+│   └── views/
+├── database/
+├── etl/
+├── screener/
+└── utils/
 │
 └── tests/
 ```
@@ -335,7 +338,6 @@ data/nifty100.db
 Contains normalized financial information for all Nifty 100 companies across multiple financial years.
 
 ---
-
 # ▶️ Running the Project
 
 ## Step 1
@@ -352,13 +354,13 @@ python -m venv .venv
 
 Activate environment
 
-Windows
+### Windows
 
 ```bash
 .venv\Scripts\activate
 ```
 
-Linux/Mac
+### Linux / macOS
 
 ```bash
 source .venv/bin/activate
@@ -378,7 +380,7 @@ pip install -r requirements.txt
 
 ## Step 4
 
-Run ETL
+Run ETL Pipeline
 
 ```bash
 python -m src.etl.loader
@@ -418,11 +420,139 @@ python -m src.analytics.peer
 
 ## Step 8
 
-Generate Radar Chart
+Generate Radar Charts
 
 ```bash
 python -m src.analytics.radar_chart
 ```
+
+---
+
+## Step 9
+
+Launch the Interactive Dashboard
+
+```bash
+streamlit run src/dashboard/app.py
+```
+
+---
+
+# 📊 Sprint 4 — Interactive Analytics Dashboard
+
+## Objective
+
+Develop a modern, interactive web dashboard using **Streamlit** and **Plotly** to visualize financial analytics, compare companies, screen stocks, and generate downloadable reports for investment research.
+
+---
+
+## Dashboard Modules
+
+### 🏠 Home Dashboard
+
+- Financial KPIs
+- Sector Distribution
+- Top Performing Companies
+- Revenue Growth Analysis
+- PAT Growth Analysis
+- Interactive Charts
+
+---
+
+### 🏢 Company Profile
+
+Detailed company-wise financial analysis including:
+
+- Company Snapshot
+- Revenue Trend
+- Net Profit Trend
+- EPS Analysis
+- ROE & ROCE Trend
+- Debt Analysis
+- Balance Sheet Overview
+- Cash Flow Analysis
+- Reports
+- Pros & Cons
+
+---
+
+### 🔍 Stock Screener
+
+Interactive stock screener with configurable filters:
+
+- Company Search
+- Sector Filter
+- ROE Filter
+- ROCE Filter
+- Debt to Equity Filter
+- Composite Quality Score Filter
+
+Includes downloadable CSV reports.
+
+---
+
+### ⚖️ Peer Comparison
+
+Compare companies within the same peer group using:
+
+- ROE vs ROCE Comparison
+- Quality Score Ranking
+- Revenue CAGR
+- PAT CAGR
+- Financial Metrics Table
+- Overall Ranking
+
+---
+
+### 📈 Trend Analysis
+
+Historical financial analysis including:
+
+- Revenue Trend
+- Net Profit Trend
+- EPS Trend
+- ROE Trend
+- ROCE Trend
+- Debt Trend
+- Composite Quality Score Trend
+
+---
+
+### 🏭 Sector Analysis
+
+Analyze sector-level performance using:
+
+- Company Distribution
+- Average ROE
+- Average ROCE
+- Average Quality Score
+- Free Cash Flow Comparison
+- Debt Analysis
+- Sector Ranking
+
+---
+
+### 💰 Capital Allocation
+
+Evaluate capital allocation efficiency through:
+
+- ROCE Distribution
+- Free Cash Flow Analysis
+- Dividend Yield
+- Buyback Yield
+- Capital Allocation Ranking
+- Best Capital Allocator
+
+---
+
+### 📑 Reports & Downloads
+
+Generate interactive reports including:
+
+- Company Summary
+- Financial Metrics
+- CSV Export
+- Summary Statistics
 
 ---
 
@@ -436,7 +566,7 @@ python -m src.analytics.radar_chart
 
 ✔ CAGR Analytics
 
-✔ Quality Scoring
+✔ Composite Quality Scoring
 
 ✔ Risk Analysis
 
@@ -448,9 +578,28 @@ python -m src.analytics.radar_chart
 
 ✔ Radar Charts
 
-✔ Excel Reporting
+✔ Interactive Streamlit Dashboard
+
+✔ Plotly Visualizations
+
+✔ Sector Analytics
+
+✔ Capital Allocation Analysis
+
+✔ CSV & Excel Reporting
 
 ✔ Modular Python Architecture
+
+---
+
+# 🚀 Future Enhancements
+
+- Real-time stock market integration
+- Portfolio performance tracking
+- Machine Learning-based stock recommendations
+- Interactive forecasting models
+- Cloud deployment
+- User authentication and personalized watchlists
 
 ---
 
@@ -466,4 +615,4 @@ Dr. B. R. Ambedkar National Institute of Technology, Jalandhar
 
 # 📄 License
 
-This project is developed for educational and analytical purposes.
+This project has been developed for educational and analytical purposes only. It is intended to demonstrate financial data engineering, analytics, and visualization techniques using publicly available financial datasets.
