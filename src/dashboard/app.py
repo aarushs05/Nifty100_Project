@@ -1,6 +1,6 @@
 """
 Nifty 100 Analytics Dashboard
-Sprint 4
+Sprint 5
 
 Main Streamlit Application
 """
@@ -36,16 +36,15 @@ st.set_page_config(
 # Import Dashboard Pages
 # -------------------------------------------------------
 
-from src.dashboard.views import (
-    home,
-    profile,
-    screener,
-    peers,
-    trends,
-    sectors,
-    capital,
-    reports,
-)
+import src.dashboard.views.home as home
+import src.dashboard.views.profile as profile
+import src.dashboard.views.screener as screener
+import src.dashboard.views.peers as peers
+import src.dashboard.views.trends as trends
+import src.dashboard.views.sectors as sectors
+import src.dashboard.views.capital as capital
+import src.dashboard.views.reports as reports
+import src.dashboard.views.nlp_insights as nlp_insights
 
 # -------------------------------------------------------
 # Sidebar
@@ -63,14 +62,15 @@ page = st.sidebar.radio(
         "🔎 Screener",
         "⚖ Peer Comparison",
         "📈 Trend Analysis",
-        "🏭 Sector Analysis",
+        "🧭 Sector Analysis",
         "🗺 Capital Allocation",
         "📑 Annual Reports",
+        "🧠 NLP Insights",
     ],
 )
 
 st.sidebar.markdown("---")
-st.sidebar.caption("Sprint 4 Dashboard")
+st.sidebar.caption("Sprint 5 Dashboard")
 st.sidebar.caption("Bluestock Capstone Project")
 
 # -------------------------------------------------------
@@ -92,7 +92,7 @@ elif page == "⚖ Peer Comparison":
 elif page == "📈 Trend Analysis":
     trends.show()
 
-elif page == "🏭 Sector Analysis":
+elif page == "🧭 Sector Analysis":
     sectors.show()
 
 elif page == "🗺 Capital Allocation":
@@ -100,3 +100,6 @@ elif page == "🗺 Capital Allocation":
 
 elif page == "📑 Annual Reports":
     reports.show()
+
+elif page == "🧠 NLP Insights":
+    nlp_insights.show()

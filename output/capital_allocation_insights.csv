@@ -1,0 +1,91 @@
+company_id,allocation_quality,allocation_comment,allocation_score
+DRREDDY,Strong,Capital employed efficiently. Balance sheet remains conservative.,75
+DMART,Excellent,Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,85
+TORNTPHARM,Excellent,Strong shareholder returns. Capital employed efficiently. Business requires modest capital investment.,90
+EICHERMOT,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative.,90
+DLF,Poor,Low shareholder returns. Weak capital efficiency. Balance sheet remains conservative.,30
+NESTLEIND,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+BAJFINANCE,Poor,Weak capital efficiency. High leverage may reduce flexibility.,25
+BAJAJHLDNG,Average,Balance sheet remains conservative. Business requires significant capital investment.,50
+NTPC,Weak,High leverage may reduce flexibility.,40
+TVSMOTOR,Strong,Strong shareholder returns. High leverage may reduce flexibility. Business requires modest capital investment.,65
+CIPLA,Strong,Capital employed efficiently. Balance sheet remains conservative.,75
+HINDALCO,Average,Low shareholder returns. Capital employed efficiently. Business requires modest capital investment.,60
+TATACONSUM,Weak,Low shareholder returns. Balance sheet remains conservative.,45
+HINDUNILVR,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+ICICIGI,Excellent,Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,85
+ICICIBANK,Poor,Weak capital efficiency. High leverage may reduce flexibility. Business requires significant capital investment.,15
+CHOLAFIN,Poor,Weak capital efficiency. High leverage may reduce flexibility.,25
+SUNPHARMA,Excellent,Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,85
+AMBUJACEM,Average,Balance sheet remains conservative. Business requires significant capital investment.,50
+ICICIPRULI,Strong,Low shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,70
+CANBK,Weak,Weak capital efficiency. High leverage may reduce flexibility. Business requires modest capital investment.,35
+BRITANNIA,Excellent,Strong shareholder returns. Capital employed efficiently. Business requires modest capital investment.,90
+INDUSINDBK,Weak,Weak capital efficiency. High leverage may reduce flexibility. Business requires modest capital investment.,35
+SHRIRAMFIN,Weak,Weak capital efficiency. High leverage may reduce flexibility. Business requires modest capital investment.,35
+APOLLOHOSP,Strong,Capital employed efficiently. Business requires modest capital investment.,75
+IOC,Excellent,Strong shareholder returns. Capital employed efficiently. Business requires modest capital investment.,90
+INFY,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+HEROMOTOCO,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+HDFCLIFE,Strong,Capital employed efficiently. Balance sheet remains conservative.,75
+TATAPOWER,Weak,High leverage may reduce flexibility.,40
+TATAMOTORS,Excellent,Strong shareholder returns. Capital employed efficiently. High leverage may reduce flexibility. Business requires modest capital investment.,80
+ADANIPOWER,Excellent,Strong shareholder returns. Capital employed efficiently. Business requires modest capital investment.,90
+SHREECEM,Strong,Low shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,70
+SIEMENS,Excellent,Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,85
+IRCTC,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+BPCL,Excellent,Strong shareholder returns. Capital employed efficiently. Business requires modest capital investment.,90
+ITC,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+ASIANPAINT,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+SBILIFE,Average,Balance sheet remains conservative.,60
+IRFC,Weak,Weak capital efficiency. High leverage may reduce flexibility. Business requires modest capital investment.,35
+JIOFIN,Poor,Low shareholder returns. Weak capital efficiency. Balance sheet remains conservative. Business requires significant capital investment.,20
+JINDALSTEL,Average,Balance sheet remains conservative.,60
+HAVELLS,Excellent,Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,85
+DABUR,Excellent,Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,85
+ADANIPORTS,Weak,Business requires significant capital investment.,40
+TATASTEEL,Poor,Low shareholder returns. Weak capital efficiency. Business requires modest capital investment.,30
+COALINDIA,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+HDFCBANK,Weak,Weak capital efficiency. High leverage may reduce flexibility. Business requires modest capital investment.,35
+RELIANCE,Weak,Low shareholder returns.,35
+RECLTD,Average,Strong shareholder returns. Weak capital efficiency. High leverage may reduce flexibility. Business requires modest capital investment.,50
+BAJAJ-AUTO,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+BOSCHLTD,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+JSWENERGY,Poor,Low shareholder returns. High leverage may reduce flexibility. Business requires significant capital investment.,15
+JSWSTEEL,Average,High leverage may reduce flexibility. Business requires modest capital investment.,50
+POWERGRID,Poor,High leverage may reduce flexibility. Business requires significant capital investment.,30
+LODHA,Weak,Low shareholder returns. Balance sheet remains conservative. Business requires significant capital investment.,35
+LICI,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+KOTAKBANK,Poor,Weak capital efficiency. High leverage may reduce flexibility.,25
+BHEL,Weak,Low shareholder returns. Weak capital efficiency. Balance sheet remains conservative. Business requires modest capital investment.,40
+TCS,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+TITAN,Excellent,Strong shareholder returns. Capital employed efficiently. High leverage may reduce flexibility. Business requires modest capital investment.,80
+HAL,Excellent,Strong shareholder returns. Capital employed efficiently.,80
+DIVISLAB,Strong,Balance sheet remains conservative. Business requires modest capital investment.,70
+HCLTECH,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+BEL,Strong,Strong shareholder returns. Capital employed efficiently. Business requires significant capital investment.,70
+LT,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+PNB,Strong,Strong shareholder returns. High leverage may reduce flexibility. Business requires modest capital investment.,65
+AXISBANK,Weak,Weak capital efficiency. High leverage may reduce flexibility. Business requires modest capital investment.,35
+LTIM,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative.,90
+PFC,Average,Strong shareholder returns. Weak capital efficiency. High leverage may reduce flexibility. Business requires modest capital investment.,50
+BAJAJFINSV,Strong,Strong shareholder returns. High leverage may reduce flexibility. Business requires modest capital investment.,65
+BHARTIARTL,Weak,Capital employed efficiently. High leverage may reduce flexibility. Business requires significant capital investment.,45
+MARUTI,Excellent,Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,85
+M&M,Average,High leverage may reduce flexibility. Business requires modest capital investment.,50
+MOTHERSON,Strong,Capital employed efficiently. Business requires modest capital investment.,75
+GAIL,Strong,Balance sheet remains conservative. Business requires modest capital investment.,70
+TECHM,Average,Low shareholder returns. Balance sheet remains conservative. Business requires modest capital investment.,55
+ADANIGREEN,Poor,High leverage may reduce flexibility. Business requires significant capital investment.,30
+GRASIM,Weak,High leverage may reduce flexibility.,40
+GODREJCP,Poor,Low shareholder returns. Weak capital efficiency. Balance sheet remains conservative.,30
+BANKBARODA,Weak,Weak capital efficiency. High leverage may reduce flexibility. Business requires modest capital investment.,35
+ONGC,Excellent,Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,85
+PIDILITIND,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative.,90
+NAUKRI,Poor,Low shareholder returns. Weak capital efficiency. Balance sheet remains conservative. Business requires significant capital investment.,20
+NHPC,Poor,Weak capital efficiency. Business requires significant capital investment.,25
+ADANIENSOL,Poor,Low shareholder returns. High leverage may reduce flexibility. Business requires significant capital investment.,15
+ABB,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+TRENT,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative. Business requires modest capital investment.,100
+INDIGO,Excellent,Strong shareholder returns. Capital employed efficiently. Balance sheet remains conservative.,90
+ADANIENT,Poor,Low shareholder returns. High leverage may reduce flexibility.,25

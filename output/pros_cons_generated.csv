@@ -1,0 +1,91 @@
+company_id,pros,cons,confidence_score
+DRREDDY,Efficient capital allocation; Conservative balance sheet; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,37.5
+DMART,Efficient capital allocation; Conservative balance sheet; Healthy revenue growth; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,43.75
+TORNTPHARM,Strong return on equity; Efficient capital allocation; Strong profit growth; Healthy free cash flow generation,Low earnings quality,31.25
+EICHERMOT,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Weak cash conversion; Low earnings quality,37.5
+DLF,Conservative balance sheet; Strong profit growth,Slow revenue growth; Low shareholder returns; Weak cash conversion; Low earnings quality,37.5
+NESTLEIND,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Low earnings quality,31.25
+BAJFINANCE,Healthy revenue growth; Strong profit growth; Strong interest coverage,High leverage levels; Weak cash conversion; Low earnings quality,37.5
+BAJAJHLDNG,Conservative balance sheet; Healthy revenue growth; Strong profit growth; Strong interest coverage; Healthy free cash flow generation,Low earnings quality; High capital expenditure requirements,43.75
+NTPC,No major strengths identified,High leverage levels; Weak cash conversion; Low earnings quality,18.75
+TVSMOTOR,Strong return on equity; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,37.5
+CIPLA,Efficient capital allocation; Conservative balance sheet; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,37.5
+HINDALCO,Efficient capital allocation; Strong interest coverage,Low shareholder returns; Weak cash conversion; Low earnings quality,31.25
+TATACONSUM,Conservative balance sheet; Healthy revenue growth; Strong profit growth; Strong interest coverage,Low shareholder returns; Weak cash conversion; Low earnings quality,43.75
+HINDUNILVR,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Weak cash conversion; Low earnings quality,37.5
+ICICIGI,Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Weak cash conversion; Low earnings quality,31.25
+ICICIBANK,Healthy revenue growth; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality; High capital expenditure requirements,43.75
+CHOLAFIN,Healthy revenue growth; Strong profit growth; Strong interest coverage,High leverage levels; Weak cash conversion; Low earnings quality,37.5
+SUNPHARMA,Efficient capital allocation; Conservative balance sheet; Strong profit growth; Strong interest coverage; Healthy free cash flow generation,Low earnings quality,37.5
+AMBUJACEM,Conservative balance sheet; Strong interest coverage,Slow revenue growth; Weak cash conversion; Low earnings quality; High capital expenditure requirements,37.5
+ICICIPRULI,Efficient capital allocation; Conservative balance sheet; Healthy revenue growth; Strong interest coverage,Low shareholder returns; Weak profit growth; Weak cash conversion; Low earnings quality,50.0
+CANBK,Healthy revenue growth; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,37.5
+BRITANNIA,Strong return on equity; Efficient capital allocation; Strong interest coverage; Healthy free cash flow generation,Low earnings quality,31.25
+INDUSINDBK,Healthy revenue growth; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,37.5
+SHRIRAMFIN,Healthy revenue growth; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,37.5
+APOLLOHOSP,Efficient capital allocation; Strong profit growth,Weak cash conversion; Low earnings quality,25.0
+IOC,Strong return on equity; Efficient capital allocation; Strong profit growth; Strong interest coverage,Low earnings quality,31.25
+INFY,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Low earnings quality,31.25
+HEROMOTOCO,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Slow revenue growth; Weak profit growth; Weak cash conversion; Low earnings quality,50.0
+HDFCLIFE,Efficient capital allocation; Conservative balance sheet; Healthy revenue growth; Strong interest coverage,Weak profit growth; Weak cash conversion; Low earnings quality,43.75
+TATAPOWER,Healthy revenue growth,High leverage levels; Weak cash conversion; Low earnings quality,25.0
+TATAMOTORS,Strong return on equity; Efficient capital allocation,High leverage levels; Low earnings quality,25.0
+ADANIPOWER,Strong return on equity; Efficient capital allocation; Healthy revenue growth; Healthy free cash flow generation,Low earnings quality,31.25
+SHREECEM,Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Low shareholder returns; Weak cash conversion; Low earnings quality,37.5
+SIEMENS,Efficient capital allocation; Conservative balance sheet; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,37.5
+IRCTC,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Healthy revenue growth; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,50.0
+BPCL,Strong return on equity; Efficient capital allocation; Strong profit growth; Strong interest coverage,Low earnings quality,31.25
+ITC,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Low earnings quality,31.25
+ASIANPAINT,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,43.75
+SBILIFE,Conservative balance sheet; Healthy revenue growth; Strong interest coverage,Weak cash conversion; Low earnings quality,31.25
+IRFC,Healthy revenue growth; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,37.5
+JIOFIN,Conservative balance sheet; Strong interest coverage,Low shareholder returns; Weak cash conversion; Low earnings quality; High capital expenditure requirements,37.5
+JINDALSTEL,Conservative balance sheet,Slow revenue growth; Weak cash conversion; Low earnings quality,25.0
+HAVELLS,Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Weak cash conversion; Low earnings quality,31.25
+DABUR,Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Weak profit growth; Weak cash conversion; Low earnings quality,37.5
+ADANIPORTS,Healthy revenue growth,Low earnings quality; High capital expenditure requirements,18.75
+TATASTEEL,No major strengths identified,Weak interest coverage; Low shareholder returns; Weak cash conversion; Low earnings quality,25.0
+COALINDIA,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,43.75
+HDFCBANK,Healthy revenue growth; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,37.5
+RELIANCE,No major strengths identified,Low shareholder returns; Weak cash conversion; Low earnings quality,18.75
+RECLTD,Strong return on equity; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,37.5
+BAJAJ-AUTO,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Low earnings quality,31.25
+BOSCHLTD,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Low earnings quality,31.25
+JSWENERGY,Strong profit growth,High leverage levels; Weak interest coverage; Slow revenue growth; Low shareholder returns; Weak cash conversion; Low earnings quality; High capital expenditure requirements,50.0
+JSWSTEEL,Healthy revenue growth,High leverage levels; Weak profit growth; Weak cash conversion; Low earnings quality,31.25
+POWERGRID,No major strengths identified,High leverage levels; Low earnings quality; High capital expenditure requirements,18.75
+LODHA,Conservative balance sheet,Slow revenue growth; Low shareholder returns; Weak profit growth; Weak cash conversion; Low earnings quality; High capital expenditure requirements,43.75
+LICI,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,43.75
+KOTAKBANK,Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,31.25
+BHEL,Conservative balance sheet,Weak interest coverage; Slow revenue growth; Low shareholder returns; Weak profit growth; Weak cash conversion; Low earnings quality,43.75
+TCS,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Low earnings quality,31.25
+TITAN,Strong return on equity; Efficient capital allocation; Healthy revenue growth; Strong profit growth,High leverage levels; Weak cash conversion; Low earnings quality,43.75
+HAL,Strong return on equity; Efficient capital allocation; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,37.5
+DIVISLAB,Conservative balance sheet; Strong interest coverage,Weak profit growth; Weak cash conversion; Low earnings quality,31.25
+HCLTECH,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Low earnings quality,31.25
+BEL,Strong return on equity; Efficient capital allocation; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality; High capital expenditure requirements,43.75
+LT,Strong return on equity; Efficient capital allocation; Conservative balance sheet,Low earnings quality,25.0
+PNB,Strong return on equity; Healthy revenue growth,High leverage levels; Low earnings quality,25.0
+AXISBANK,Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,31.25
+LTIM,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Healthy revenue growth; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,50.0
+PFC,Strong return on equity; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,37.5
+BAJAJFINSV,Strong return on equity; Healthy revenue growth; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,43.75
+BHARTIARTL,Efficient capital allocation; Strong profit growth,High leverage levels; Weak cash conversion; Low earnings quality; High capital expenditure requirements,37.5
+MARUTI,Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Weak cash conversion; Low earnings quality,31.25
+M&M,Strong profit growth,High leverage levels; Weak cash conversion; Low earnings quality,25.0
+MOTHERSON,Efficient capital allocation,Weak cash conversion; Low earnings quality,18.75
+GAIL,Conservative balance sheet; Strong interest coverage,Weak cash conversion; Low earnings quality,25.0
+TECHM,Conservative balance sheet; Strong interest coverage; Healthy free cash flow generation,Low shareholder returns; Weak profit growth; Low earnings quality,37.5
+ADANIGREEN,Healthy revenue growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality; High capital expenditure requirements,37.5
+GRASIM,Strong profit growth,High leverage levels; Weak cash conversion; Low earnings quality,25.0
+GODREJCP,Conservative balance sheet,Weak interest coverage; Low shareholder returns; Weak cash conversion; Low earnings quality,31.25
+BANKBARODA,Healthy revenue growth; Strong profit growth,High leverage levels; Weak interest coverage; Weak cash conversion; Low earnings quality,37.5
+ONGC,Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Weak cash conversion; Low earnings quality,31.25
+PIDILITIND,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong interest coverage,Weak cash conversion; Low earnings quality,37.5
+NAUKRI,Conservative balance sheet; Healthy revenue growth; Strong interest coverage,Low shareholder returns; Weak profit growth; Weak cash conversion; Low earnings quality; High capital expenditure requirements,50.0
+NHPC,Strong interest coverage,Slow revenue growth; Weak cash conversion; Low earnings quality; High capital expenditure requirements,31.25
+ADANIENSOL,Healthy revenue growth; Strong profit growth,High leverage levels; Weak interest coverage; Low shareholder returns; Weak cash conversion; Low earnings quality; High capital expenditure requirements,50.0
+ABB,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Strong profit growth; Strong interest coverage,Low earnings quality,37.5
+TRENT,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Healthy revenue growth; Strong profit growth,Weak cash conversion; Low earnings quality,43.75
+INDIGO,Strong return on equity; Efficient capital allocation; Conservative balance sheet; Healthy revenue growth; Strong profit growth; Strong interest coverage,Weak cash conversion; Low earnings quality,50.0
+ADANIENT,Healthy revenue growth; Strong profit growth,High leverage levels; Weak interest coverage; Low shareholder returns; Weak cash conversion; Low earnings quality,43.75

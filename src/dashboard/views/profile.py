@@ -1,3 +1,5 @@
+from logging import root
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -597,8 +599,10 @@ def show():
     # =====================================================
 
     st.divider()
+    st.divider()
 
-    st.caption(
-        "Nifty 100 Analytics Dashboard • Sprint 4 • Company Profile"
-    )
+    st.divider()
 
+st.caption(
+    "Nifty 100 Analytics Dashboard • Sprint 5 • Company Profile"
+)

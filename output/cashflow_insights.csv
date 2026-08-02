@@ -1,0 +1,91 @@
+company_id,cashflow_health,cashflow_comment,risk_level,cashflow_score
+HCLTECH,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+ICICIGI,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+TATACONSUM,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+TATAPOWER,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+HAVELLS,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+HEROMOTOCO,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+TATAMOTORS,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+HINDALCO,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+TATASTEEL,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+INDUSINDBK,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+PNB,Poor,Negative operating cash flow is a warning sign. Reported earnings may not be strongly supported by cash generation.,HIGH,15
+ADANIENSOL,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+PIDILITIND,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+ABB,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+SUNPHARMA,Strong,Operating cash flow remains positive. Business converts profits into cash efficiently. Reported earnings may not be strongly supported by cash generation.,MEDIUM,70
+HINDUNILVR,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+ICICIBANK,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+INDIGO,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+ICICIPRULI,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+HDFCBANK,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+HAL,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+BRITANNIA,Strong,Operating cash flow remains positive. Business converts profits into cash efficiently. Reported earnings may not be strongly supported by cash generation.,MEDIUM,70
+BPCL,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+TRENT,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+BOSCHLTD,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+CIPLA,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+CHOLAFIN,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+COALINDIA,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+BHEL,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+JSWSTEEL,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+SHREECEM,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+DMART,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+JSWENERGY,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+LICI,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+KOTAKBANK,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+TITAN,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+TORNTPHARM,Strong,Operating cash flow remains positive. Business converts profits into cash efficiently. Reported earnings may not be strongly supported by cash generation.,MEDIUM,70
+DRREDDY,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+JINDALSTEL,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+JIOFIN,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+IRCTC,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+SHRIRAMFIN,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+IRFC,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+ITC,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+GRASIM,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+GODREJCP,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+EICHERMOT,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+GAIL,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+TECHM,Strong,Operating cash flow remains positive. Business converts profits into cash efficiently. Reported earnings may not be strongly supported by cash generation.,MEDIUM,70
+DABUR,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+DIVISLAB,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+DLF,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+HDFCLIFE,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+IOC,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+SIEMENS,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+INFY,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+TCS,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+POWERGRID,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+BAJAJFINSV,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+SBILIFE,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+BEL,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+BANKBARODA,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+BHARTIARTL,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+TVSMOTOR,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+APOLLOHOSP,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+NAUKRI,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+NESTLEIND,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+RELIANCE,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+M&M,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+MARUTI,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+MOTHERSON,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+ADANIENT,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+BAJAJ-AUTO,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+CANBK,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+LODHA,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+LTIM,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+LT,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+BAJFINANCE,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+BAJAJHLDNG,Strong,Operating cash flow remains positive. Business converts profits into cash efficiently. Reported earnings may not be strongly supported by cash generation.,MEDIUM,70
+ADANIPOWER,Strong,Operating cash flow remains positive. Business converts profits into cash efficiently. Reported earnings may not be strongly supported by cash generation.,MEDIUM,70
+ADANIPORTS,Average,Operating cash flow remains positive. Reported earnings may not be strongly supported by cash generation.,MEDIUM,55
+ADANIGREEN,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+ASIANPAINT,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+AXISBANK,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+RECLTD,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
+AMBUJACEM,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+NTPC,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+NHPC,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+ONGC,Weak,Operating cash flow remains positive. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,40
+PFC,Poor,Negative operating cash flow is a warning sign. Weak cash conversion may impact future growth. Reported earnings may not be strongly supported by cash generation.,HIGH,0
