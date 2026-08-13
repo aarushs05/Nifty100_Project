@@ -3,8 +3,8 @@ Populate financial_ratios table
 Generate capital allocation CSV
 """
 
-from pathlib import Path
 import logging
+from pathlib import Path
 
 import pandas as pd
 
@@ -14,7 +14,7 @@ from src.database.sqlite import SQLiteDB
 logging.basicConfig(
     filename="output/ratio_edge_cases.log",
     level=logging.INFO,
-    format="%(asctime)s | %(levelname)s | %(message)s"
+    format="%(asctime)s | %(levelname)s | %(message)s",
 )
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -39,10 +39,7 @@ def populate():
     # Replace financial_ratios table
     # -----------------------------------
 
-    db.replace_table(
-        ratios,
-        "financial_ratios"
-    )
+    db.replace_table(ratios, "financial_ratios")
 
     print("financial_ratios updated")
 
@@ -50,18 +47,9 @@ def populate():
     # Capital Allocation CSV
     # -----------------------------------
 
-    capital = pd.DataFrame(
-        engine.capital_records
-    )
+    capital = pd.DataFrame(engine.capital_records)
 
-    capital.to_csv(
-
-        OUTPUT /
-        "capital_allocation.csv",
-
-        index=False
-
-    )
+    capital.to_csv(OUTPUT / "capital_allocation.csv", index=False)
 
     print("capital_allocation.csv created")
 
@@ -69,19 +57,13 @@ def populate():
     # Verification
     # -----------------------------------
 
-    rows = db.row_count(
-        "financial_ratios"
-    )
+    rows = db.row_count("financial_ratios")
 
     print()
 
     print("=" * 50)
 
-    print(
-        f"financial_ratios rows : {rows}"
-    )
-
-    
+    print(f"financial_ratios rows : {rows}")
 
     expected_rows = len(ratios)
 
@@ -91,9 +73,7 @@ def populate():
 
     else:
 
-        print(
-            f"WARNING: Expected {expected_rows} rows but found {rows}"
-        )
+        print(f"WARNING: Expected {expected_rows} rows but found {rows}")
 
     db.close()
 
@@ -101,8 +81,6 @@ def populate():
 if __name__ == "__main__":
 
     populate()
-
-
 
 
 # import sqlite3

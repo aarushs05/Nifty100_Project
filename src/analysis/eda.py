@@ -1,4 +1,5 @@
 import sqlite3
+
 import pandas as pd
 
 DB_PATH = "data/nifty100.db"
@@ -6,21 +7,16 @@ DB_PATH = "data/nifty100.db"
 conn = sqlite3.connect(DB_PATH)
 
 
-companies = pd.read_sql(
-    "SELECT * FROM companies",
-    conn
-)
+companies = pd.read_sql("SELECT * FROM companies", conn)
 
-print(companies.head()) 
+print(companies.head())
 
 query = """
 SELECT COUNT(*)
 FROM companies
 """
 
-print(
-    pd.read_sql(query, conn)
-)
+print(pd.read_sql(query, conn))
 
 query = """
 SELECT company_id,
@@ -61,7 +57,6 @@ avg_close = pd.read_sql(query, conn)
 print(avg_close.head(10))
 
 
-
 query = """
 SELECT company_id,
        MAX(net_profit) AS max_profit
@@ -76,16 +71,6 @@ profit = pd.read_sql(query, conn)
 print(profit)
 
 
+top_market_cap.to_csv("output/top_market_cap.csv", index=False)
 
-top_market_cap.to_csv(
-    "output/top_market_cap.csv",
-    index=False
-)
-
-sector_df.to_csv(
-    "output/sector_distribution.csv",
-    index=False
-)
-
-
-
+sector_df.to_csv("output/sector_distribution.csv", index=False)

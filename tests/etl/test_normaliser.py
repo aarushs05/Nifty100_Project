@@ -1,13 +1,13 @@
-import sys
 import os
+import sys
 
 sys.path.append(os.path.abspath("src/etl"))
 
 from normaliser import (
-    normalize_year,
     normalize_company_id,
-    normalize_text,
     normalize_numeric,
+    normalize_text,
+    normalize_year,
 )
 
 
@@ -42,7 +42,9 @@ def test_text_spaces():
 def test_text_newline():
     assert normalize_text("ABC\\nDEF") == "ABC DEF"
 
+
 import pytest
+
 
 @pytest.mark.parametrize(
     "value,expected",
@@ -71,6 +73,7 @@ import pytest
 )
 def test_normalize_year_param(value, expected):
     assert normalize_year(value) == expected
+
 
 @pytest.mark.parametrize(
     "value,expected",
@@ -109,7 +112,9 @@ def test_normalize_company_id_param(value, expected):
 def test_normalize_text_param(value, expected):
     assert normalize_text(value) == expected
 
+
 import pandas as pd
+
 
 @pytest.mark.parametrize(
     "value,expected",

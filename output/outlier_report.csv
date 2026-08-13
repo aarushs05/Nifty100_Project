@@ -1,0 +1,13 @@
+company_id,company_name,broad_sector,year,field,value,sector_mean,sector_std,z_score,issue
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Financials,2024.0,net_profit_margin_pct,432.73,39.25681818181818,87.57121877682104,4.493179235302924,Absolute sector Z-score > 3
+PNB,Punjab National Bank,Financials,2024.0,asset_turnover,1.51,0.19863636363636364,0.3026593562908856,4.332803890269581,Absolute sector Z-score > 3
+INDIGO,Interglobe Aviation Ltd,Consumer Discretionary,2024.0,return_on_capital_employed_pct,5643.45,441.11500000000007,1443.4045776108157,3.604211238273281,Absolute sector Z-score > 3
+INDIGO,Interglobe Aviation Ltd,Consumer Discretionary,2024.0,return_on_assets_pct,668.33,59.226428571428585,169.01894203259093,3.603759224283404,Absolute sector Z-score > 3
+INDIGO,Interglobe Aviation Ltd,Consumer Discretionary,2024.0,asset_turnover,56.39,5.157857142857145,14.216626673708214,3.6036778648686036,Absolute sector Z-score > 3
+INDIGO,Interglobe Aviation Ltd,Consumer Discretionary,2024.0,return_on_equity_pct,892.57,86.72428571428573,223.66192688693243,3.6029633004686246,Absolute sector Z-score > 3
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Financials,2024.0,interest_coverage,3764.5,366.0328571428571,948.4111681079238,3.5833267860363454,Absolute sector Z-score > 3
+PNB,Punjab National Bank,Financials,2024.0,return_on_equity_pct,61.32,19.00681818181818,12.722745339231707,3.3257902040768976,Absolute sector Z-score > 3
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Financials,2024.0,return_on_capital_employed_pct,754.89,81.28857142857142,204.08144110310735,3.3006500979729325,Absolute sector Z-score > 3
+PNB,Punjab National Bank,Financials,2024.0,return_on_assets_pct,12.65,2.725454545454545,3.0726546521811153,3.2299579933268925,Absolute sector Z-score > 3
+ADANIGREEN,Adani Green Energy Ltd,Energy,2024.0,debt_to_equity,6.6,1.538461538461538,1.6088258793477843,3.146107062617865,Absolute sector Z-score > 3
+ADANIGREEN,Adani Green Energy Ltd,Energy,2024.0,fcf_conversion_pct,-182.39,18.253846153846155,65.00381912312318,-3.086647044134566,Absolute sector Z-score > 3

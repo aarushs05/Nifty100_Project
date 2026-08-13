@@ -1,4 +1,5 @@
 import sqlite3
+
 import pandas as pd
 
 DB_PATH = "data/nifty100.db"
@@ -15,16 +16,11 @@ class DatabaseManager:
         return cursor.fetchall()
 
     def read_table(self, table_name):
-        return pd.read_sql_query(
-            f"SELECT * FROM {table_name}",
-            self.conn
-        )
+        return pd.read_sql_query(f"SELECT * FROM {table_name}", self.conn)
 
     def row_count(self, table_name):
         cursor = self.conn.cursor()
-        cursor.execute(
-            f"SELECT COUNT(*) FROM {table_name}"
-        )
+        cursor.execute(f"SELECT COUNT(*) FROM {table_name}")
         return cursor.fetchone()[0]
 
     def list_tables(self):

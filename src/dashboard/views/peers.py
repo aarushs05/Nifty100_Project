@@ -1,11 +1,11 @@
-import streamlit as st
 import pandas as pd
 import plotly.express as px
+import streamlit as st
 
 from src.dashboard.utils.db import (
+    get_company_profile,
     get_peer_groups,
     get_peers,
-    get_company_profile,
     get_ratios,
 )
 
@@ -20,10 +20,7 @@ def show():
         st.warning("No peer groups available.")
         return
 
-    peer_group = st.selectbox(
-        "Select Peer Group",
-        groups["peer_group_name"].tolist()
-    )
+    peer_group = st.selectbox("Select Peer Group", groups["peer_group_name"].tolist())
 
     peers = get_peers(peer_group)
 
@@ -43,29 +40,17 @@ def show():
 
         latest = ratios.sort_values("year").iloc[-1]
 
-        records.append({
-
-            "Company": profile["company_name"],
-
-            "ROE":
-                latest["return_on_equity_pct"],
-
-            "ROCE":
-                latest["return_on_capital_employed_pct"],
-
-            "Debt/Equity":
-                latest["debt_to_equity"],
-
-            "Revenue CAGR":
-                latest["revenue_cagr_5yr"],
-
-            "PAT CAGR":
-                latest["pat_cagr_5yr"],
-
-            "Quality Score":
-                latest["composite_quality_score"]
-
-        })
+        records.append(
+            {
+                "Company": profile["company_name"],
+                "ROE": latest["return_on_equity_pct"],
+                "ROCE": latest["return_on_capital_employed_pct"],
+                "Debt/Equity": latest["debt_to_equity"],
+                "Revenue CAGR": latest["revenue_cagr_5yr"],
+                "PAT CAGR": latest["pat_cagr_5yr"],
+                "Quality Score": latest["composite_quality_score"],
+            }
+        )
 
     df = pd.DataFrame(records)
 
@@ -77,40 +62,22 @@ def show():
 
     c1, c2, c3 = st.columns(3)
 
-    c1.metric(
-        "Companies",
-        len(df)
-    )
+    c1.metric("Companies", len(df))
 
-    c2.metric(
-        "Average ROE",
-        f"{df['ROE'].mean():.2f}%"
-    )
+    c2.metric("Average ROE", f"{df['ROE'].mean():.2f}%")
 
-    c3.metric(
-        "Average Quality",
-        f"{df['Quality Score'].mean():.2f}"
-    )
+    c3.metric("Average Quality", f"{df['Quality Score'].mean():.2f}")
 
     st.divider()
 
     st.subheader("📋 Peer Comparison Table")
 
-    st.dataframe(
-        df,
-        use_container_width=True,
-        hide_index=True
-    )
+    st.dataframe(df, use_container_width=True, hide_index=True)
 
     csv = df.to_csv(index=False).encode("utf-8")
 
-    st.download_button(
-        "⬇ Download Comparison",
-        csv,
-        "peer_comparison.csv",
-        "text/csv"
-    )
-        # =====================================================
+    st.download_button("⬇ Download Comparison", csv, "peer_comparison.csv", "text/csv")
+    # =====================================================
     # ROE vs ROCE Scatter
     # =====================================================
 
@@ -125,17 +92,12 @@ def show():
         color="Quality Score",
         size="Quality Score",
         hover_name="Company",
-        text="Company"
+        text="Company",
     )
 
-    fig.update_layout(
-        height=600
-    )
+    fig.update_layout(height=600)
 
-    st.plotly_chart(
-        fig,
-        use_container_width=True
-    )
+    st.plotly_chart(fig, use_container_width=True)
 
     # =====================================================
     # Quality Ranking
@@ -145,27 +107,19 @@ def show():
 
     st.subheader("🏆 Quality Score Ranking")
 
-    quality = df.sort_values(
-        "Quality Score",
-        ascending=False
-    )
+    quality = df.sort_values("Quality Score", ascending=False)
 
     fig = px.bar(
         quality,
         x="Company",
         y="Quality Score",
         color="Quality Score",
-        text="Quality Score"
+        text="Quality Score",
     )
 
-    fig.update_layout(
-        height=500
-    )
+    fig.update_layout(height=500)
 
-    st.plotly_chart(
-        fig,
-        use_container_width=True
-    )
+    st.plotly_chart(fig, use_container_width=True)
 
     # =====================================================
     # Revenue CAGR Comparison
@@ -176,24 +130,16 @@ def show():
     st.subheader("📊 Revenue CAGR")
 
     fig = px.bar(
-        df.sort_values(
-            "Revenue CAGR",
-            ascending=False
-        ),
+        df.sort_values("Revenue CAGR", ascending=False),
         x="Company",
         y="Revenue CAGR",
         text="Revenue CAGR",
-        color="Revenue CAGR"
+        color="Revenue CAGR",
     )
 
-    fig.update_layout(
-        height=450
-    )
+    fig.update_layout(height=450)
 
-    st.plotly_chart(
-        fig,
-        use_container_width=True
-    )
+    st.plotly_chart(fig, use_container_width=True)
 
     # =====================================================
     # PAT CAGR Comparison
@@ -204,24 +150,16 @@ def show():
     st.subheader("💰 PAT CAGR")
 
     fig = px.bar(
-        df.sort_values(
-            "PAT CAGR",
-            ascending=False
-        ),
+        df.sort_values("PAT CAGR", ascending=False),
         x="Company",
         y="PAT CAGR",
         text="PAT CAGR",
-        color="PAT CAGR"
+        color="PAT CAGR",
     )
 
-    fig.update_layout(
-        height=450
-    )
+    fig.update_layout(height=450)
 
-    st.plotly_chart(
-        fig,
-        use_container_width=True
-    )
+    st.plotly_chart(fig, use_container_width=True)
 
     # =====================================================
     # Financial Ratios Heatmap
@@ -233,11 +171,7 @@ def show():
 
     metrics = df.set_index("Company")
 
-    st.dataframe(
-        metrics,
-        use_container_width=True,
-        height=400
-)
+    st.dataframe(metrics, use_container_width=True, height=400)
 
     # =====================================================
     # Best Company
@@ -247,12 +181,9 @@ def show():
 
     st.subheader("⭐ Best Overall Performer")
 
-    winner = df.sort_values(
-        "Quality Score",
-        ascending=False
-    ).iloc[0]
+    winner = df.sort_values("Quality Score", ascending=False).iloc[0]
 
-    c1, c2 = st.columns([2,1])
+    c1, c2 = st.columns([2, 1])
 
     with c1:
 
@@ -268,10 +199,7 @@ def show():
 
     with c2:
 
-        st.metric(
-            "Quality Score",
-            f"{winner['Quality Score']:.2f}"
-        )
+        st.metric("Quality Score", f"{winner['Quality Score']:.2f}")
 
     # =====================================================
     # Ranking Table
@@ -281,20 +209,11 @@ def show():
 
     st.subheader("🏅 Overall Ranking")
 
-    ranking = (
-        df.sort_values(
-            "Quality Score",
-            ascending=False
-        )
-        .reset_index(drop=True)
-    )
+    ranking = df.sort_values("Quality Score", ascending=False).reset_index(drop=True)
 
     ranking.index += 1
 
-    st.dataframe(
-        ranking,
-        use_container_width=True
-    )
+    st.dataframe(ranking, use_container_width=True)
 
     # =====================================================
     # Footer
@@ -302,10 +221,7 @@ def show():
 
     st.divider()
 
-    st.caption(
-        "Nifty 100 Analytics Dashboard • Sprint 4 • Peer Comparison"
-    )
-        # =====================================================
-    
+    st.caption("Nifty 100 Analytics Dashboard • Sprint 4 • Peer Comparison")
+    # =====================================================
 
-            # =====================================================
+    # =====================================================

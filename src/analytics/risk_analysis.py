@@ -4,7 +4,6 @@ Risk Analysis
 """
 
 from pathlib import Path
-import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -29,108 +28,43 @@ class RiskAnalysis:
         # -----------------------------------------
 
         df["risk_score"] = (
-
             df["debt_to_equity"].rank(pct=True) * 60
-
-            +
-
-            (1 - df["interest_coverage"].rank(pct=True)) * 40
-
+            + (1 - df["interest_coverage"].rank(pct=True)) * 40
         )
 
         # -----------------------------------------
         # Safest Companies
         # -----------------------------------------
 
-        safest = (
-
-            df
-
-            .sort_values(
-
-                "risk_score"
-
-            )
-
-            .head(20)
-
-        )
+        safest = df.sort_values("risk_score").head(20)
 
         # -----------------------------------------
         # Riskiest Companies
         # -----------------------------------------
 
-        riskiest = (
-
-            df
-
-            .sort_values(
-
-                "risk_score",
-
-                ascending=False
-
-            )
-
-            .head(20)
-
-        )
+        riskiest = df.sort_values("risk_score", ascending=False).head(20)
 
         # -----------------------------------------
         # Save CSVs
         # -----------------------------------------
 
-        safest.to_csv(
+        safest.to_csv(OUTPUT / "lowest_risk_companies.csv", index=False)
 
-            OUTPUT / "lowest_risk_companies.csv",
-
-            index=False
-
-        )
-
-        riskiest.to_csv(
-
-            OUTPUT / "highest_risk_companies.csv",
-
-            index=False
-
-        )
+        riskiest.to_csv(OUTPUT / "highest_risk_companies.csv", index=False)
 
         risk_summary = (
-
             df.groupby("broad_sector")
-
             .agg(
-
                 average_risk=("risk_score", "mean"),
-
                 average_debt=("debt_to_equity", "mean"),
-
                 average_interest=("interest_coverage", "mean"),
-
-                companies=("company_id", "count")
-
+                companies=("company_id", "count"),
             )
-
             .reset_index()
-
-            .sort_values(
-
-                "average_risk",
-
-                ascending=False
-
-            )
-
+            .sort_values("average_risk", ascending=False)
         )
 
-        risk_summary.to_csv(
-
-            OUTPUT / "risk_summary.csv",
-
-            index=False
-
-        )
+        risk_summary.to_csv(OUTPUT / "risk_summary.csv", index=False)
 
         print()
 
@@ -145,23 +79,9 @@ class RiskAnalysis:
         print("Top 10 Safest Companies")
 
         print(
-
             safest[
-
-                [
-
-                    "company_name",
-
-                    "debt_to_equity",
-
-                    "interest_coverage",
-
-                    "risk_score"
-
-                ]
-
+                ["company_name", "debt_to_equity", "interest_coverage", "risk_score"]
             ].head(10)
-
         )
 
         print()
@@ -169,33 +89,11 @@ class RiskAnalysis:
         print("Top 10 Highest Risk Companies")
 
         print(
-
             riskiest[
-
-                [
-
-                    "company_name",
-
-                    "debt_to_equity",
-
-                    "interest_coverage",
-
-                    "risk_score"
-
-                ]
-
+                ["company_name", "debt_to_equity", "interest_coverage", "risk_score"]
             ].head(10)
-
         )
 
         print()
 
-        return {
-
-            "summary": risk_summary,
-
-            "safe": safest,
-
-            "risky": riskiest
-
-        }
+        return {"summary": risk_summary, "safe": safest, "risky": riskiest}

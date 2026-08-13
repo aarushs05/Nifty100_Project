@@ -36,15 +36,17 @@ st.set_page_config(
 # Import Dashboard Pages
 # -------------------------------------------------------
 
-import src.dashboard.views.home as home
-import src.dashboard.views.profile as profile
-import src.dashboard.views.screener as screener
-import src.dashboard.views.peers as peers
-import src.dashboard.views.trends as trends
-import src.dashboard.views.sectors as sectors
-import src.dashboard.views.capital as capital
-import src.dashboard.views.reports as reports
-import src.dashboard.views.nlp_insights as nlp_insights
+from src.dashboard.views import (
+    capital,
+    home,
+    nlp_insights,
+    peers,
+    profile,
+    reports,
+    screener,
+    sectors,
+    trends,
+)
 
 # -------------------------------------------------------
 # Sidebar

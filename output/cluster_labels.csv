@@ -1,0 +1,93 @@
+company_id,cluster_id,cluster_name,distance_from_centroid
+ABB,0,Distressed or Turnaround,0.6051137013209037
+ADANIENSOL,0,Distressed or Turnaround,1.3524703029710148
+ADANIENT,0,Distressed or Turnaround,1.3741613293477315
+ADANIPOWER,0,Distressed or Turnaround,1.110476929935781
+AMBUJACEM,0,Distressed or Turnaround,0.8760867064174133
+APOLLOHOSP,0,Distressed or Turnaround,0.5708451249576539
+ASIANPAINT,0,Distressed or Turnaround,0.37058875150517934
+ATGL,0,Distressed or Turnaround,0.40574240455820365
+BAJAJ-AUTO,0,Distressed or Turnaround,0.6109920893799506
+BHEL,0,Distressed or Turnaround,2.378031554492871
+BOSCHLTD,0,Distressed or Turnaround,0.955458623554618
+BPCL,0,Distressed or Turnaround,0.5364960852645301
+BRITANNIA,0,Distressed or Turnaround,1.5921454288894665
+DABUR,0,Distressed or Turnaround,0.8777892448308139
+DIVISLAB,0,Distressed or Turnaround,0.7340305603399782
+DLF,0,Distressed or Turnaround,2.436386513504101
+DMART,0,Distressed or Turnaround,1.369450967763177
+DRREDDY,0,Distressed or Turnaround,1.2603741053099191
+EICHERMOT,0,Distressed or Turnaround,0.49537586797625105
+GAIL,0,Distressed or Turnaround,0.3817623078192916
+GODREJCP,0,Distressed or Turnaround,0.6632195126354925
+GRASIM,0,Distressed or Turnaround,0.7728245934047567
+HAVELLS,0,Distressed or Turnaround,0.9533470480329146
+HCLTECH,0,Distressed or Turnaround,0.4617963506049843
+INFY,0,Distressed or Turnaround,0.3787753600111304
+IOC,0,Distressed or Turnaround,0.5848213029430599
+IRCTC,0,Distressed or Turnaround,1.3489018457872466
+ITC,0,Distressed or Turnaround,0.8644168645870098
+JINDALSTEL,0,Distressed or Turnaround,1.3437620155231604
+JSWENERGY,0,Distressed or Turnaround,1.3834978574398624
+JSWSTEEL,0,Distressed or Turnaround,0.6610664251983293
+LICI,0,Distressed or Turnaround,2.1105724959279812
+LODHA,0,Distressed or Turnaround,2.0986388428181018
+LT,0,Distressed or Turnaround,0.7619544619252977
+LTIM,0,Distressed or Turnaround,2.6618041724926855
+M&M,0,Distressed or Turnaround,0.8301398681126726
+MARUTI,0,Distressed or Turnaround,0.3406343154825675
+MOTHERSON,0,Distressed or Turnaround,0.6454676641822851
+NAUKRI,0,Distressed or Turnaround,0.8934249991746285
+NESTLEIND,0,Distressed or Turnaround,0.583621218817258
+NHPC,0,Distressed or Turnaround,2.0025442940388616
+NTPC,0,Distressed or Turnaround,0.4855550918087192
+ONGC,0,Distressed or Turnaround,0.5819440308516081
+PIDILITIND,0,Distressed or Turnaround,0.45020361499606576
+RELIANCE,0,Distressed or Turnaround,0.23067258544063352
+SBILIFE,0,Distressed or Turnaround,2.039235947065759
+SHREECEM,0,Distressed or Turnaround,0.2576328651277497
+SIEMENS,0,Distressed or Turnaround,1.410466724139039
+SUNPHARMA,0,Distressed or Turnaround,1.0934958551991298
+TATACONSUM,0,Distressed or Turnaround,1.7453287957450718
+TATAMOTORS,0,Distressed or Turnaround,0.5887897929328695
+TATAPOWER,0,Distressed or Turnaround,0.875483677535738
+TATASTEEL,0,Distressed or Turnaround,0.6253911711155995
+TCS,0,Distressed or Turnaround,0.3162875223246837
+TECHM,0,Distressed or Turnaround,0.6186743029740156
+TITAN,0,Distressed or Turnaround,1.5330848764502012
+TORNTPHARM,0,Distressed or Turnaround,0.7281173143950439
+TRENT,0,Distressed or Turnaround,3.4582868552060844
+TVSMOTOR,0,Distressed or Turnaround,1.2455061098683455
+ADANIGREEN,1,Emerging Growth,2.538978680813811
+AXISBANK,1,Emerging Growth,0.9138126007259764
+BAJAJFINSV,1,Emerging Growth,0.9736857674088536
+BAJFINANCE,1,Emerging Growth,1.5646618088971116
+BANKBARODA,1,Emerging Growth,1.8590211213932544
+CANBK,1,Emerging Growth,2.7669277143562643
+CHOLAFIN,1,Emerging Growth,0.9202641559021763
+HDFCBANK,1,Emerging Growth,0.6041682288273544
+ICICIBANK,1,Emerging Growth,0.5654899043951935
+INDUSINDBK,1,Emerging Growth,0.6390701789139384
+IRFC,1,Emerging Growth,1.9109076615832739
+PFC,1,Emerging Growth,1.294046410657178
+PNB,1,Emerging Growth,1.2961061132593388
+RECLTD,1,Emerging Growth,2.0615103994298054
+SBIN,1,Emerging Growth,1.0046481622802648
+SHRIRAMFIN,1,Emerging Growth,1.3357677238233991
+BEL,2,Defensive Dividend Payers,0.761122775987781
+HAL,2,Defensive Dividend Payers,0.761122775987781
+CIPLA,3,Value Cyclicals,0.0
+ADANIPORTS,4,High-Quality Compounders,1.3916359578919475
+BAJAJHLDNG,4,High-Quality Compounders,2.4543684807581987
+BHARTIARTL,4,High-Quality Compounders,1.3009544592459965
+COALINDIA,4,High-Quality Compounders,1.136024941015362
+HDFCLIFE,4,High-Quality Compounders,1.3472118836217934
+HEROMOTOCO,4,High-Quality Compounders,1.7197987343449042
+HINDALCO,4,High-Quality Compounders,0.6201104486206042
+HINDUNILVR,4,High-Quality Compounders,0.7367190324048488
+ICICIGI,4,High-Quality Compounders,0.7454315178082027
+ICICIPRULI,4,High-Quality Compounders,2.2999357561390377
+INDIGO,4,High-Quality Compounders,2.4362693401227955
+JIOFIN,4,High-Quality Compounders,0.8291069183418963
+KOTAKBANK,4,High-Quality Compounders,1.3380020800525552
+POWERGRID,4,High-Quality Compounders,1.5326856886288984

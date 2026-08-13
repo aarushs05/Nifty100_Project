@@ -8,7 +8,6 @@ Author: Aarush Singh
 from __future__ import annotations
 
 import logging
-from typing import Optional
 
 logger = logging.getLogger(__name__)
 
@@ -17,8 +16,8 @@ logger = logging.getLogger(__name__)
 # Helper Functions
 # ============================================================
 
-def safe_divide(numerator: float,
-                denominator: float) -> Optional[float]:
+
+def safe_divide(numerator: float, denominator: float) -> float | None:
     """
     Safe division.
 
@@ -31,8 +30,7 @@ def safe_divide(numerator: float,
     return numerator / denominator
 
 
-def round_ratio(value: Optional[float],
-                digits: int = 2) -> Optional[float]:
+def round_ratio(value: float | None, digits: int = 2) -> float | None:
 
     if value is None:
         return None
@@ -44,10 +42,8 @@ def round_ratio(value: Optional[float],
 # Profitability Ratios
 # ============================================================
 
-def net_profit_margin(
-        net_profit: float,
-        sales: float
-) -> Optional[float]:
+
+def net_profit_margin(net_profit: float, sales: float) -> float | None:
     """
     Net Profit Margin
 
@@ -62,10 +58,7 @@ def net_profit_margin(
     return round((net_profit / sales) * 100, 2)
 
 
-def operating_profit_margin(
-        operating_profit: float,
-        sales: float
-) -> Optional[float]:
+def operating_profit_margin(operating_profit: float, sales: float) -> float | None:
     """
     Operating Profit Margin
     """
@@ -77,10 +70,10 @@ def operating_profit_margin(
 
 
 def check_opm_difference(
-        calculated_opm: Optional[float],
-        source_opm: Optional[float],
-        company: str,
-        year: int
+    calculated_opm: float | None,
+    source_opm: float | None,
+    company: str,
+    year: int,
 ) -> bool:
     """
     Cross-check calculated OPM against source.
@@ -111,10 +104,8 @@ def check_opm_difference(
 
 
 def return_on_equity(
-        net_profit: float,
-        equity_capital: float,
-        reserves: float
-) -> Optional[float]:
+    net_profit: float, equity_capital: float, reserves: float
+) -> float | None:
     """
     ROE
 
@@ -124,29 +115,17 @@ def return_on_equity(
     ×100
     """
 
-    shareholder_equity = (
-        equity_capital +
-        reserves
-    )
+    shareholder_equity = equity_capital + reserves
 
     if shareholder_equity <= 0:
         return None
 
-    return round(
-        (
-            net_profit /
-            shareholder_equity
-        ) * 100,
-        2
-    )
+    return round((net_profit / shareholder_equity) * 100, 2)
 
 
 def return_on_capital_employed(
-        ebit: float,
-        equity_capital: float,
-        reserves: float,
-        borrowings: float
-) -> Optional[float]:
+    ebit: float, equity_capital: float, reserves: float, borrowings: float
+) -> float | None:
     """
     ROCE
 
@@ -157,28 +136,15 @@ def return_on_capital_employed(
     ×100
     """
 
-    capital_employed = (
-        equity_capital +
-        reserves +
-        borrowings
-    )
+    capital_employed = equity_capital + reserves + borrowings
 
     if capital_employed <= 0:
         return None
 
-    return round(
-        (
-            ebit /
-            capital_employed
-        ) * 100,
-        2
-    )
+    return round((ebit / capital_employed) * 100, 2)
 
 
-def return_on_assets(
-        net_profit: float,
-        total_assets: float
-) -> Optional[float]:
+def return_on_assets(net_profit: float, total_assets: float) -> float | None:
     """
     ROA
     """
@@ -186,24 +152,17 @@ def return_on_assets(
     if total_assets == 0:
         return None
 
-    return round(
-        (
-            net_profit /
-            total_assets
-        ) * 100,
-        2
-    )
+    return round((net_profit / total_assets) * 100, 2)
 
 
 # ============================================================
 # Leverage Ratios
 # ============================================================
 
+
 def debt_to_equity(
-        borrowings: float,
-        equity_capital: float,
-        reserves: float
-) -> Optional[float]:
+    borrowings: float, equity_capital: float, reserves: float
+) -> float | None:
     """
     Debt / Equity
 
@@ -215,25 +174,15 @@ def debt_to_equity(
     if borrowings == 0:
         return 0
 
-    shareholder_equity = (
-        equity_capital +
-        reserves
-    )
+    shareholder_equity = equity_capital + reserves
 
     if shareholder_equity <= 0:
         return None
 
-    return round(
-        borrowings /
-        shareholder_equity,
-        2
-    )
+    return round(borrowings / shareholder_equity, 2)
 
 
-def high_leverage_flag(
-        debt_equity: Optional[float],
-        broad_sector: str
-) -> bool:
+def high_leverage_flag(debt_equity: float | None, broad_sector: str) -> bool:
     """
     High leverage
 
@@ -253,11 +202,10 @@ def high_leverage_flag(
 # Interest Coverage Ratio
 # ============================================================
 
+
 def interest_coverage_ratio(
-        operating_profit: float,
-        other_income: float,
-        interest: float
-) -> Optional[float]:
+    operating_profit: float, other_income: float, interest: float
+) -> float | None:
     """
     Interest Coverage Ratio
 
@@ -269,18 +217,12 @@ def interest_coverage_ratio(
     if interest == 0:
         return None
 
-    icr = (
-        operating_profit +
-        other_income
-    ) / interest
+    icr = (operating_profit + other_income) / interest
 
     return round(icr, 2)
 
 
-def icr_label(
-        interest: float,
-        icr: Optional[float]
-) -> str:
+def icr_label(interest: float, icr: float | None) -> str:
     """
     Display label
     """
@@ -294,9 +236,7 @@ def icr_label(
     return ""
 
 
-def icr_warning_flag(
-        icr: Optional[float]
-) -> bool:
+def icr_warning_flag(icr: float | None) -> bool:
     """
     Company unable to comfortably
     pay interest.
@@ -312,10 +252,8 @@ def icr_warning_flag(
 # Net Debt
 # ============================================================
 
-def net_debt(
-        borrowings: float,
-        investments: float
-) -> float:
+
+def net_debt(borrowings: float, investments: float) -> float:
     """
     Net Debt
 
@@ -323,41 +261,32 @@ def net_debt(
     Investments
     """
 
-    return round(
-        borrowings -
-        investments,
-        2
-    )
+    return round(borrowings - investments, 2)
 
 
 # ============================================================
 # Asset Turnover
 # ============================================================
 
-def asset_turnover(
-        sales: float,
-        total_assets: float
-) -> Optional[float]:
+
+def asset_turnover(sales: float, total_assets: float) -> float | None:
 
     if total_assets == 0:
         return None
 
-    return round(
-        sales /
-        total_assets,
-        2
-    )
+    return round(sales / total_assets, 2)
 
 
 # ============================================================
 # ROCE Cross Check
 # ============================================================
 
+
 def check_roce_difference(
-        calculated_roce: Optional[float],
-        source_roce: Optional[float],
-        company: str,
-        year: int
+    calculated_roce: float | None,
+    source_roce: float | None,
+    company: str,
+    year: int,
 ) -> bool:
 
     if calculated_roce is None:
@@ -366,10 +295,7 @@ def check_roce_difference(
     if source_roce is None:
         return False
 
-    difference = abs(
-        calculated_roce -
-        source_roce
-    )
+    difference = abs(calculated_roce - source_roce)
 
     if difference > 5:
 
@@ -389,11 +315,12 @@ def check_roce_difference(
 # ROE Cross Check
 # ============================================================
 
+
 def check_roe_difference(
-        calculated_roe: Optional[float],
-        source_roe: Optional[float],
-        company: str,
-        year: int
+    calculated_roe: float | None,
+    source_roe: float | None,
+    company: str,
+    year: int,
 ) -> bool:
 
     if calculated_roe is None:
@@ -402,10 +329,7 @@ def check_roe_difference(
     if source_roe is None:
         return False
 
-    difference = abs(
-        calculated_roe -
-        source_roe
-    )
+    difference = abs(calculated_roe - source_roe)
 
     if difference > 5:
 
@@ -425,12 +349,13 @@ def check_roe_difference(
 # Composite Quality Score
 # ============================================================
 
+
 def quality_score(
-        roe: Optional[float],
-        roce: Optional[float],
-        npm: Optional[float],
-        de: Optional[float]
-) -> Optional[float]:
+    roe: float | None,
+    roce: float | None,
+    npm: float | None,
+    de: float | None,
+) -> float | None:
 
     score = 0
 
@@ -453,10 +378,8 @@ def quality_score(
 # EBIT
 # ============================================================
 
-def ebit(
-        operating_profit: float,
-        other_income: float
-) -> float:
+
+def ebit(operating_profit: float, other_income: float) -> float:
     """
     Approximation
 

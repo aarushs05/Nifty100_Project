@@ -19,7 +19,7 @@ def dq01_primary_key(df, dataset_name, key_column="id"):
                 "severity": "CRITICAL",
                 "dataset": dataset_name,
                 "row": index + 2,
-                "message": f"Duplicate primary key: {row[key_column]}"
+                "message": f"Duplicate primary key: {row[key_column]}",
             }
         )
 
@@ -37,10 +37,7 @@ def dq02_company_year(df, dataset_name):
 
     failures = []
 
-    duplicate_rows = df[df.duplicated(
-        subset=["company_id", "year"],
-        keep=False
-    )]
+    duplicate_rows = df[df.duplicated(subset=["company_id", "year"], keep=False)]
 
     for idx, row in duplicate_rows.iterrows():
 
@@ -53,7 +50,7 @@ def dq02_company_year(df, dataset_name):
                 "message": (
                     f"Duplicate company_id '{row['company_id']}' "
                     f"for year {row['year']}"
-                )
+                ),
             }
         )
 
@@ -71,19 +68,9 @@ def dq03_foreign_key(df, companies_df, dataset_name):
 
     failures = []
 
-    valid_ids = set(
-        companies_df["id"]
-        .astype(str)
-        .str.strip()
-        .str.upper()
-    )
+    valid_ids = set(companies_df["id"].astype(str).str.strip().str.upper())
 
-    company_ids = (
-        df["company_id"]
-        .astype(str)
-        .str.strip()
-        .str.upper()
-    )
+    company_ids = df["company_id"].astype(str).str.strip().str.upper()
 
     invalid_ids = sorted(set(company_ids) - valid_ids)
 
@@ -95,7 +82,7 @@ def dq03_foreign_key(df, companies_df, dataset_name):
                 "severity": "CRITICAL",
                 "dataset": dataset_name,
                 "row": "-",
-                "message": f"Company ID '{company}' not found in companies.xlsx"
+                "message": f"Company ID '{company}' not found in companies.xlsx",
             }
         )
 
@@ -122,20 +109,11 @@ def dq04_valid_year(df, dataset_name):
     current_year = pd.Timestamp.today().year
 
     # Remove TTM rows before validation
-    valid_df = df[
-        df[year_col]
-        .astype(str)
-        .str.upper()
-        != "TTM"
-    ].copy()
+    valid_df = df[df[year_col].astype(str).str.upper() != "TTM"].copy()
 
     years = pd.to_numeric(valid_df[year_col], errors="coerce")
 
-    invalid = valid_df[
-        years.isna() |
-        (years < 1990) |
-        (years > current_year)
-    ]
+    invalid = valid_df[years.isna() | (years < 1990) | (years > current_year)]
 
     for idx, row in invalid.iterrows():
         failures.append(
@@ -144,7 +122,7 @@ def dq04_valid_year(df, dataset_name):
                 "severity": "MAJOR",
                 "dataset": dataset_name,
                 "row": idx + 2,
-                "message": f"Invalid year: {row[year_col]}"
+                "message": f"Invalid year: {row[year_col]}",
             }
         )
 
@@ -172,11 +150,12 @@ def dq05_positive_market_cap(df, dataset_name):
                 "severity": "CRITICAL",
                 "dataset": dataset_name,
                 "row": idx + 2,
-                "message": f"Invalid Market Cap: {row['market_cap_crore']}"
+                "message": f"Invalid Market Cap: {row['market_cap_crore']}",
             }
         )
 
     return failures
+
 
 def dq06_financial_values(df, dataset_name):
     """
@@ -185,16 +164,13 @@ def dq06_financial_values(df, dataset_name):
     """
 
     numeric_columns = [
-    "debt_to_equity",
-    "asset_turnover",
-    "book_value_per_share",
-    "total_debt_cr",
-]
-
-    numeric_columns = [
-        col for col in numeric_columns
-        if col in df.columns
+        "debt_to_equity",
+        "asset_turnover",
+        "book_value_per_share",
+        "total_debt_cr",
     ]
+
+    numeric_columns = [col for col in numeric_columns if col in df.columns]
 
     failures = []
 
@@ -210,7 +186,7 @@ def dq06_financial_values(df, dataset_name):
                     "severity": "WARNING",
                     "dataset": dataset_name,
                     "row": idx + 2,
-                    "message": f"{col} cannot be negative ({row[col]})"
+                    "message": f"{col} cannot be negative ({row[col]})",
                 }
             )
 
@@ -228,7 +204,7 @@ def dq07_positive_prices(df, dataset_name):
         "high_price",
         "low_price",
         "close_price",
-        "adjusted_close"
+        "adjusted_close",
     ]
 
     if not all(col in df.columns for col in price_columns):
@@ -248,11 +224,12 @@ def dq07_positive_prices(df, dataset_name):
                     "severity": "CRITICAL",
                     "dataset": dataset_name,
                     "row": idx + 2,
-                    "message": f"{col} must be greater than 0 (found {row[col]})"
+                    "message": f"{col} must be greater than 0 (found {row[col]})",
                 }
             )
 
     return failures
+
 
 def dq08_high_price(df, dataset_name):
     """
@@ -260,12 +237,7 @@ def dq08_high_price(df, dataset_name):
     High price must be the highest price of the day.
     """
 
-    required = [
-        "high_price",
-        "open_price",
-        "close_price",
-        "low_price"
-    ]
+    required = ["high_price", "open_price", "close_price", "low_price"]
 
     if not all(col in df.columns for col in required):
         return []
@@ -273,9 +245,9 @@ def dq08_high_price(df, dataset_name):
     failures = []
 
     invalid = df[
-        (df["high_price"] < df["open_price"]) |
-        (df["high_price"] < df["close_price"]) |
-        (df["high_price"] < df["low_price"])
+        (df["high_price"] < df["open_price"])
+        | (df["high_price"] < df["close_price"])
+        | (df["high_price"] < df["low_price"])
     ]
 
     for idx, row in invalid.iterrows():
@@ -286,7 +258,7 @@ def dq08_high_price(df, dataset_name):
                 "severity": "MAJOR",
                 "dataset": dataset_name,
                 "row": idx + 2,
-                "message": "High price is smaller than another day's price."
+                "message": "High price is smaller than another day's price.",
             }
         )
 
@@ -299,12 +271,7 @@ def dq09_low_price(df, dataset_name):
     Low price must be the lowest price of the day.
     """
 
-    required = [
-        "low_price",
-        "open_price",
-        "close_price",
-        "high_price"
-    ]
+    required = ["low_price", "open_price", "close_price", "high_price"]
 
     if not all(col in df.columns for col in required):
         return []
@@ -312,9 +279,9 @@ def dq09_low_price(df, dataset_name):
     failures = []
 
     invalid = df[
-        (df["low_price"] > df["open_price"]) |
-        (df["low_price"] > df["close_price"]) |
-        (df["low_price"] > df["high_price"])
+        (df["low_price"] > df["open_price"])
+        | (df["low_price"] > df["close_price"])
+        | (df["low_price"] > df["high_price"])
     ]
 
     for idx, row in invalid.iterrows():
@@ -325,7 +292,7 @@ def dq09_low_price(df, dataset_name):
                 "severity": "MAJOR",
                 "dataset": dataset_name,
                 "row": idx + 2,
-                "message": "Low price is greater than another day's price."
+                "message": "Low price is greater than another day's price.",
             }
         )
 
@@ -353,7 +320,7 @@ def dq10_volume(df, dataset_name):
                 "severity": "CRITICAL",
                 "dataset": dataset_name,
                 "row": idx + 2,
-                "message": f"Invalid trading volume: {row['volume']}"
+                "message": f"Invalid trading volume: {row['volume']}",
             }
         )
 

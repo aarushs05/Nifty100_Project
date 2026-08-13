@@ -1,6 +1,13 @@
+"""Screener package."""
+
+from src.database.sqlite import SQLiteDB
+
+
 class AdvancedAnalytics:
+    """Provide access to database tables for advanced analytics."""
 
     def __init__(self):
+        """Load required analytics tables from SQLite."""
 
         self.db = SQLiteDB()
 
@@ -15,5 +22,5 @@ class AdvancedAnalytics:
         print("sectors:", self.sector.shape)
 
     def run(self):
-
-        pass
+        """Run advanced analytics."""
+        return

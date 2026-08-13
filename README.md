@@ -544,7 +544,93 @@ Evaluate capital allocation efficiency through:
 - Best Capital Allocator
 
 ---
+---
 
+# 📊 Sprint 5 — Advanced Analytics & Risk Analysis
+
+## Objective
+
+Extend the financial analytics platform with advanced risk, valuation, investor, and portfolio analytics.
+
+## Advanced Analytics
+
+Implemented analytics include:
+
+- Historical Value at Risk (VaR)
+- Conditional Value at Risk (CVaR)
+- Rolling Sharpe Ratio
+- Investor Cohort Analysis
+- SIP Continuity Analysis
+- Fund/Company Risk Analysis
+- Sector Concentration Analysis
+- Portfolio Statistics
+- Capital Allocation Analysis
+
+## Risk Metrics
+
+Key risk measures include:
+
+- Volatility
+- Sharpe Ratio
+- Sortino Ratio
+- Maximum Drawdown
+- Value at Risk
+- Conditional Value at Risk
+- Beta
+- Alpha
+
+## Generated Reports
+
+Advanced analytics generate:
+
+- Risk summaries
+- Company scorecards
+- Portfolio statistics
+- Capital allocation reports
+- Valuation reports
+- Company narratives
+- Risk rankings
+
+---
+
+# 🤖 Sprint 6 — Clustering, REST API & Final QA
+
+## Objective
+
+Sprint 6 completes the platform by adding machine-learning based financial clustering, a REST API, automated testing, performance testing, documentation, and final acceptance validation.
+
+---
+
+## KMeans Financial Clustering
+
+The project uses KMeans clustering to classify all 92 companies into five financial archetypes.
+
+### Features Used
+
+The clustering model uses:
+
+- Return on Equity (ROE)
+- Debt to Equity
+- Revenue CAGR (5-Year)
+- Free Cash Flow CAGR (5-Year)
+- Operating Profit Margin
+
+### Preprocessing
+
+Before clustering:
+
+1. Missing values are identified.
+2. Missing financial metrics are imputed using sector-level medians.
+3. Features are standardized using StandardScaler.
+4. KMeans is executed with five clusters.
+
+### Model Configuration
+
+```text
+Algorithm: KMeans
+Clusters: 5
+Random State: 42
+Scaling: StandardScaler
 ### 📑 Reports & Downloads
 
 Generate interactive reports including:

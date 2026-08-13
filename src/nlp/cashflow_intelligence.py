@@ -1,4 +1,5 @@
 import sqlite3
+
 import pandas as pd
 
 # --------------------------------------------------
@@ -7,44 +8,23 @@ import pandas as pd
 
 conn = sqlite3.connect("data/nifty100.db")
 
-cashflow_df = pd.read_sql(
-    "SELECT * FROM cashflow",
-    conn
-)
+cashflow_df = pd.read_sql("SELECT * FROM cashflow", conn)
 
-ratios_df = pd.read_sql(
-    "SELECT * FROM financial_ratios",
-    conn
-)
+ratios_df = pd.read_sql("SELECT * FROM financial_ratios", conn)
 
 # --------------------------------------------------
 # Latest Row Per Company
 # --------------------------------------------------
 
-latest_cashflow = (
-    cashflow_df
-    .sort_values("year")
-    .groupby("company_id")
-    .tail(1)
-)
+latest_cashflow = cashflow_df.sort_values("year").groupby("company_id").tail(1)
 
-latest_ratios = (
-    ratios_df
-    .sort_values("year")
-    .groupby("company_id")
-    .tail(1)
-)
+latest_ratios = ratios_df.sort_values("year").groupby("company_id").tail(1)
 
 # --------------------------------------------------
 # Merge Data
 # --------------------------------------------------
 
-merged_df = pd.merge(
-    latest_cashflow,
-    latest_ratios,
-    on="company_id",
-    how="inner"
-)
+merged_df = pd.merge(latest_cashflow, latest_ratios, on="company_id", how="inner")
 
 print(f"Companies found: {len(merged_df)}")
 
@@ -71,15 +51,11 @@ for _, row in merged_df.iterrows():
     if pd.notna(operating_cf):
 
         if operating_cf > 0:
-            comments.append(
-                "Operating cash flow remains positive."
-            )
+            comments.append("Operating cash flow remains positive.")
             score += 20
 
         elif operating_cf < 0:
-            comments.append(
-                "Negative operating cash flow is a warning sign."
-            )
+            comments.append("Negative operating cash flow is a warning sign.")
             score -= 20
 
     # ----------------------------------------------
@@ -91,15 +67,11 @@ for _, row in merged_df.iterrows():
     if pd.notna(fcf_conversion):
 
         if fcf_conversion > 80:
-            comments.append(
-                "Business converts profits into cash efficiently."
-            )
+            comments.append("Business converts profits into cash efficiently.")
             score += 15
 
         elif fcf_conversion < 50:
-            comments.append(
-                "Weak cash conversion may impact future growth."
-            )
+            comments.append("Weak cash conversion may impact future growth.")
             score -= 15
 
     # ----------------------------------------------
@@ -111,9 +83,7 @@ for _, row in merged_df.iterrows():
     if pd.notna(cfo_quality):
 
         if cfo_quality > 70:
-            comments.append(
-                "Cash flow quality appears healthy."
-            )
+            comments.append("Cash flow quality appears healthy.")
             score += 15
 
         elif cfo_quality < 40:
@@ -164,13 +134,15 @@ for _, row in merged_df.iterrows():
     # Save Result
     # ----------------------------------------------
 
-    results.append({
-        "company_id": company_id,
-        "cashflow_health": health,
-        "cashflow_comment": " ".join(comments),
-        "risk_level": risk_level,
-        "cashflow_score": score
-    })
+    results.append(
+        {
+            "company_id": company_id,
+            "cashflow_health": health,
+            "cashflow_comment": " ".join(comments),
+            "risk_level": risk_level,
+            "cashflow_score": score,
+        }
+    )
 
 # --------------------------------------------------
 # Output
@@ -178,21 +150,12 @@ for _, row in merged_df.iterrows():
 
 cashflow_insights_df = pd.DataFrame(results)
 
-cashflow_insights_df.to_csv(
-    "output/cashflow_insights.csv",
-    index=False
-)
+cashflow_insights_df.to_csv("output/cashflow_insights.csv", index=False)
 
-print(
-    f"Companies processed: {len(cashflow_insights_df)}"
-)
+print(f"Companies processed: {len(cashflow_insights_df)}")
 
-print(
-    "Output saved: output/cashflow_insights.csv"
-)
+print("Output saved: output/cashflow_insights.csv")
 
 print("\nSample Output:\n")
 
-print(
-    cashflow_insights_df.head(10)
-)
+print(cashflow_insights_df.head(10))

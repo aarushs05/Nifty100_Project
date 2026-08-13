@@ -1,6 +1,3 @@
-import sqlite3
-
-
 def create_tables(conn):
     """
     Create all database tables.

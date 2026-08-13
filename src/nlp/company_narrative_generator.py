@@ -4,34 +4,18 @@ import pandas as pd
 # Load Data
 # --------------------------------------------------
 
-pros_cons = pd.read_csv(
-    "output/pros_cons_generated.csv"
-)
+pros_cons = pd.read_csv("output/pros_cons_generated.csv")
 
-cashflow = pd.read_csv(
-    "output/cashflow_insights.csv"
-)
+cashflow = pd.read_csv("output/cashflow_insights.csv")
 
-allocation = pd.read_csv(
-    "output/capital_allocation_insights.csv"
-)
+allocation = pd.read_csv("output/capital_allocation_insights.csv")
 
 # --------------------------------------------------
 # Merge Data
 # --------------------------------------------------
 
-merged = (
-    pros_cons
-    .merge(
-        cashflow,
-        on="company_id",
-        how="inner"
-    )
-    .merge(
-        allocation,
-        on="company_id",
-        how="inner"
-    )
+merged = pros_cons.merge(cashflow, on="company_id", how="inner").merge(
+    allocation, on="company_id", how="inner"
 )
 
 print(f"Companies found: {len(merged)}")
@@ -56,7 +40,7 @@ for _, row in merged.iterrows():
             + (row["cashflow_score"] * 0.40)
             + (row["allocation_score"] * 0.40)
         ),
-        2
+        2,
     )
 
     # ----------------------------------------------
@@ -114,13 +98,9 @@ for _, row in merged.iterrows():
     # Supporting Comments
     # ----------------------------------------------
 
-    cashflow_comment = str(
-        row["cashflow_comment"]
-    )
+    cashflow_comment = str(row["cashflow_comment"])
 
-    allocation_comment = str(
-        row["allocation_comment"]
-    )
+    allocation_comment = str(row["allocation_comment"])
 
     # ----------------------------------------------
     # Narrative
@@ -138,12 +118,14 @@ for _, row in merged.iterrows():
     # Save Result
     # ----------------------------------------------
 
-    results.append({
-        "company_id": company,
-        "overall_rating": rating,
-        "overall_score": overall_score,
-        "narrative": narrative
-    })
+    results.append(
+        {
+            "company_id": company,
+            "overall_rating": rating,
+            "overall_score": overall_score,
+            "narrative": narrative,
+        }
+    )
 
 # --------------------------------------------------
 # Create Output
@@ -151,25 +133,16 @@ for _, row in merged.iterrows():
 
 narratives_df = pd.DataFrame(results)
 
-narratives_df.to_csv(
-    "output/company_narratives.csv",
-    index=False
-)
+narratives_df.to_csv("output/company_narratives.csv", index=False)
 
 # --------------------------------------------------
 # Summary
 # --------------------------------------------------
 
-print(
-    f"Companies processed: {len(narratives_df)}"
-)
+print(f"Companies processed: {len(narratives_df)}")
 
-print(
-    "Output saved: output/company_narratives.csv"
-)
+print("Output saved: output/company_narratives.csv")
 
 print("\nSample Output:\n")
 
-print(
-    narratives_df.head(10)
-)
+print(narratives_df.head(10))

@@ -2,13 +2,10 @@ import sqlite3
 import sys
 from pathlib import Path
 
-import pandas as pd
-
 # Add project src directory to Python path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 from etl.loader import ExcelLoader
-
 
 DB_PATH = "data/nifty100.db"
 

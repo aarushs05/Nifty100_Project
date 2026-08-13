@@ -3,13 +3,12 @@ Sprint 3 - Advanced Analytics
 Main Runner
 """
 
-from src.database.sqlite import SQLiteDB
-
+from src.analytics.report import AnalyticsReport
+from src.analytics.risk_analysis import RiskAnalysis
 from src.analytics.scorecard import CompanyScorecard
 from src.analytics.sector_analysis import SectorAnalysis
 from src.analytics.valuation import ValuationAnalysis
-from src.analytics.risk_analysis import RiskAnalysis
-from src.analytics.report import AnalyticsReport
+from src.database.sqlite import SQLiteDB
 
 
 class AdvancedAnalytics:
@@ -34,46 +33,32 @@ class AdvancedAnalytics:
         # --------------------------------------------------
 
         scorecard = CompanyScorecard(
-            self.ratios,
-            self.company,
-            self.sector,
-            self.market
+            self.ratios, self.company, self.sector, self.market
         ).generate()
 
         # --------------------------------------------------
         # Sector Analysis
         # --------------------------------------------------
 
-        sector = SectorAnalysis(
-            scorecard
-        ).generate()
+        sector = SectorAnalysis(scorecard).generate()
 
         # --------------------------------------------------
         # Valuation Analysis
         # --------------------------------------------------
 
-        valuation = ValuationAnalysis(
-            scorecard
-        ).generate()
+        valuation = ValuationAnalysis(scorecard).generate()
 
         # --------------------------------------------------
         # Risk Analysis
         # --------------------------------------------------
 
-        risk = RiskAnalysis(
-            scorecard
-        ).generate()
+        risk = RiskAnalysis(scorecard).generate()
 
         # --------------------------------------------------
         # Final Report
         # --------------------------------------------------
 
-        AnalyticsReport(
-            scorecard,
-            sector,
-            valuation,
-            risk
-        ).generate()
+        AnalyticsReport(scorecard, sector, valuation, risk).generate()
 
         self.db.close()
 

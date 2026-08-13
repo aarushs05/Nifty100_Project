@@ -1,6 +1,7 @@
 import sqlite3
-import pandas as pd
 from pathlib import Path
+
+import pandas as pd
 
 # ----------------------------
 # Database Connection
@@ -148,40 +149,19 @@ print(top_profit)
 # Export Reports
 # ----------------------------
 
-top_market_cap.to_csv(
-    f"{OUTPUT_DIR}/top_market_cap.csv",
-    index=False
-)
+top_market_cap.to_csv(f"{OUTPUT_DIR}/top_market_cap.csv", index=False)
 
-top_roe.to_csv(
-    f"{OUTPUT_DIR}/top_roe.csv",
-    index=False
-)
+top_roe.to_csv(f"{OUTPUT_DIR}/top_roe.csv", index=False)
 
-top_roce.to_csv(
-    f"{OUTPUT_DIR}/top_roce.csv",
-    index=False
-)
+top_roce.to_csv(f"{OUTPUT_DIR}/top_roce.csv", index=False)
 
-top_eps.to_csv(
-    f"{OUTPUT_DIR}/top_eps.csv",
-    index=False
-)
+top_eps.to_csv(f"{OUTPUT_DIR}/top_eps.csv", index=False)
 
-dividend_yield.to_csv(
-    f"{OUTPUT_DIR}/average_dividend_yield.csv",
-    index=False
-)
+dividend_yield.to_csv(f"{OUTPUT_DIR}/average_dividend_yield.csv", index=False)
 
-top_volume.to_csv(
-    f"{OUTPUT_DIR}/top_volume.csv",
-    index=False
-)
+top_volume.to_csv(f"{OUTPUT_DIR}/top_volume.csv", index=False)
 
-top_profit.to_csv(
-    f"{OUTPUT_DIR}/top_profit.csv",
-    index=False
-)
+top_profit.to_csv(f"{OUTPUT_DIR}/top_profit.csv", index=False)
 
 conn.close()
 

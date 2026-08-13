@@ -1,12 +1,12 @@
-import sys
 import os
+import sys
 
 sys.path.append(os.path.abspath("src/etl"))
 
 from normaliser import (
-    normalize_year,
     normalize_company_id,
     normalize_text,
+    normalize_year,
 )
 
 

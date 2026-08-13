@@ -1,5 +1,6 @@
-import pandas as pd
 import os
+
+import pandas as pd
 
 DATA_PATH = "data/raw"
 
@@ -18,10 +19,6 @@ for file in files:
         print(f"\nSheet: {sheet}")
 
         # Read WITHOUT assuming any header
-        df = pd.read_excel(
-            os.path.join(DATA_PATH, file),
-            sheet_name=sheet,
-            header=None
-        )
+        df = pd.read_excel(os.path.join(DATA_PATH, file), sheet_name=sheet, header=None)
 
         print(df.head(10))

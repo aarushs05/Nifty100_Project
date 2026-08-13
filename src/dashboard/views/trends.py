@@ -1,14 +1,8 @@
-import streamlit as st
-import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import streamlit as st
 
-from src.dashboard.utils.db import (
-    get_companies,
-    get_ratios,
-    get_pl,
-    get_market_cap
-)
+from src.dashboard.utils.db import get_companies, get_market_cap, get_pl, get_ratios
 
 
 def show():
@@ -21,15 +15,9 @@ def show():
         st.warning("No companies available.")
         return
 
-    company = st.selectbox(
-        "Select Company",
-        companies["company_name"].tolist()
-    )
+    company = st.selectbox("Select Company", companies["company_name"].tolist())
 
-    company_id = companies.loc[
-        companies["company_name"] == company,
-        "id"
-    ].iloc[0]
+    company_id = companies.loc[companies["company_name"] == company, "id"].iloc[0]
 
     ratios = get_ratios(company_id)
     pl = get_pl(company_id)
@@ -47,25 +35,13 @@ def show():
 
     c1, c2, c3, c4 = st.columns(4)
 
-    c1.metric(
-        "ROE",
-        f"{latest['return_on_equity_pct']:.2f}%"
-    )
+    c1.metric("ROE", f"{latest['return_on_equity_pct']:.2f}%")
 
-    c2.metric(
-        "ROCE",
-        f"{latest['return_on_capital_employed_pct']:.2f}%"
-    )
+    c2.metric("ROCE", f"{latest['return_on_capital_employed_pct']:.2f}%")
 
-    c3.metric(
-        "Debt / Equity",
-        f"{latest['debt_to_equity']:.2f}"
-    )
+    c3.metric("Debt / Equity", f"{latest['debt_to_equity']:.2f}")
 
-    c4.metric(
-        "Quality Score",
-        f"{latest['composite_quality_score']:.2f}"
-    )
+    c4.metric("Quality Score", f"{latest['composite_quality_score']:.2f}")
 
     # =====================================================
     # Revenue & Profit Trend
@@ -78,32 +54,18 @@ def show():
     fig1 = go.Figure()
 
     fig1.add_trace(
-        go.Scatter(
-            x=pl["year"],
-            y=pl["sales"],
-            mode="lines+markers",
-            name="Sales"
-        )
+        go.Scatter(x=pl["year"], y=pl["sales"], mode="lines+markers", name="Sales")
     )
 
     fig1.add_trace(
         go.Scatter(
-            x=pl["year"],
-            y=pl["net_profit"],
-            mode="lines+markers",
-            name="Net Profit"
+            x=pl["year"], y=pl["net_profit"], mode="lines+markers", name="Net Profit"
         )
     )
 
-    fig1.update_layout(
-        height=500
-    )
+    fig1.update_layout(height=500)
 
-    st.plotly_chart(
-        fig1,
-        use_container_width=True,
-        key="trend_sales_profit"
-    )
+    st.plotly_chart(fig1, use_container_width=True, key="trend_sales_profit")
 
     # =====================================================
     # ROE & ROCE Trend
@@ -118,7 +80,7 @@ def show():
             x=ratios["year"],
             y=ratios["return_on_equity_pct"],
             mode="lines+markers",
-            name="ROE"
+            name="ROE",
         )
     )
 
@@ -127,20 +89,13 @@ def show():
             x=ratios["year"],
             y=ratios["return_on_capital_employed_pct"],
             mode="lines+markers",
-            name="ROCE"
+            name="ROCE",
         )
     )
 
-    fig2.update_layout(
-        title="ROE vs ROCE",
-        height=500
-    )
+    fig2.update_layout(title="ROE vs ROCE", height=500)
 
-    st.plotly_chart(
-        fig2,
-        use_container_width=True,
-        key="trend_roe_roce"
-    )
+    st.plotly_chart(fig2, use_container_width=True, key="trend_roe_roce")
     # =====================================================
     # EPS Trend
     # =====================================================
@@ -151,23 +106,11 @@ def show():
 
     if not pl.empty:
 
-        fig3 = px.bar(
-            pl,
-            x="year",
-            y="eps",
-            text="eps",
-            title="EPS Trend"
-        )
+        fig3 = px.bar(pl, x="year", y="eps", text="eps", title="EPS Trend")
 
-        fig3.update_layout(
-            height=450
-        )
+        fig3.update_layout(height=450)
 
-        st.plotly_chart(
-            fig3,
-            use_container_width=True,
-            key="trend_eps"
-        )
+        st.plotly_chart(fig3, use_container_width=True, key="trend_eps")
 
     # =====================================================
     # Debt Trend
@@ -178,22 +121,12 @@ def show():
     st.subheader("🏦 Debt to Equity")
 
     fig4 = px.line(
-        ratios,
-        x="year",
-        y="debt_to_equity",
-        markers=True,
-        title="Debt / Equity Trend"
+        ratios, x="year", y="debt_to_equity", markers=True, title="Debt / Equity Trend"
     )
 
-    fig4.update_layout(
-        height=450
-    )
+    fig4.update_layout(height=450)
 
-    st.plotly_chart(
-        fig4,
-        use_container_width=True,
-        key="trend_debt"
-    )
+    st.plotly_chart(fig4, use_container_width=True, key="trend_debt")
 
     # =====================================================
     # Quality Score Trend
@@ -208,18 +141,12 @@ def show():
         x="year",
         y="composite_quality_score",
         markers=True,
-        title="Composite Quality Score"
+        title="Composite Quality Score",
     )
 
-    fig5.update_layout(
-        height=450
-    )
+    fig5.update_layout(height=450)
 
-    st.plotly_chart(
-        fig5,
-        use_container_width=True,
-        key="trend_quality"
-    )
+    st.plotly_chart(fig5, use_container_width=True, key="trend_quality")
 
     # =====================================================
     # Market Valuation Trend
@@ -238,7 +165,7 @@ def show():
                 x=market["year"],
                 y=market["market_cap_crore"],
                 mode="lines+markers",
-                name="Market Cap"
+                name="Market Cap",
             )
         )
 
@@ -247,19 +174,13 @@ def show():
                 x=market["year"],
                 y=market["enterprise_value_crore"],
                 mode="lines+markers",
-                name="Enterprise Value"
+                name="Enterprise Value",
             )
         )
 
-        fig6.update_layout(
-            height=500
-        )
+        fig6.update_layout(height=500)
 
-        st.plotly_chart(
-            fig6,
-            use_container_width=True,
-            key="trend_marketcap"
-        )
+        st.plotly_chart(fig6, use_container_width=True, key="trend_marketcap")
 
     # =====================================================
     # Growth Comparison
@@ -272,23 +193,14 @@ def show():
     fig7 = px.bar(
         ratios,
         x="year",
-        y=[
-            "revenue_cagr_5yr",
-            "pat_cagr_5yr"
-        ],
+        y=["revenue_cagr_5yr", "pat_cagr_5yr"],
         barmode="group",
-        title="Growth Trend"
+        title="Growth Trend",
     )
 
-    fig7.update_layout(
-        height=500
-    )
+    fig7.update_layout(height=500)
 
-    st.plotly_chart(
-        fig7,
-        use_container_width=True,
-        key="trend_growth"
-    )
+    st.plotly_chart(fig7, use_container_width=True, key="trend_growth")
 
     # =====================================================
     # Financial Ratios Table
@@ -298,11 +210,7 @@ def show():
 
     st.subheader("📋 Financial Ratios")
 
-    st.dataframe(
-        ratios,
-        use_container_width=True,
-        hide_index=True
-    )
+    st.dataframe(ratios, use_container_width=True, hide_index=True)
 
     # =====================================================
     # Profit & Loss Table
@@ -310,11 +218,7 @@ def show():
 
     with st.expander("📑 Profit & Loss"):
 
-        st.dataframe(
-            pl,
-            use_container_width=True,
-            hide_index=True
-        )
+        st.dataframe(pl, use_container_width=True, hide_index=True)
 
     # =====================================================
     # Market Valuation Table
@@ -324,11 +228,7 @@ def show():
 
         with st.expander("💹 Market Valuation"):
 
-            st.dataframe(
-                market,
-                use_container_width=True,
-                hide_index=True
-            )
+            st.dataframe(market, use_container_width=True, hide_index=True)
 
     # =====================================================
     # Footer
@@ -336,6 +236,4 @@ def show():
 
     st.divider()
 
-    st.caption(
-        "Nifty 100 Analytics Dashboard • Sprint 4 • Trend Analysis"
-    )
+    st.caption("Nifty 100 Analytics Dashboard • Sprint 4 • Trend Analysis")

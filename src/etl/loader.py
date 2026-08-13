@@ -1,6 +1,8 @@
 import os
+
 import pandas as pd
 from loguru import logger
+
 from src.etl.normaliser import normalize_dataframe
 
 DATA_PATH = "data/raw"
@@ -24,10 +26,7 @@ class ExcelLoader:
 
     def load_all(self):
 
-        files = [
-            f for f in os.listdir(self.data_path)
-            if f.endswith(".xlsx")
-        ]
+        files = [f for f in os.listdir(self.data_path) if f.endswith(".xlsx")]
 
         logger.info(f"Found {len(files)} Excel files")
 
@@ -47,11 +46,10 @@ class ExcelLoader:
                 self.dataframes[file] = df
 
                 logger.success(
-                    f"{file} loaded "
-                    f"({len(df)} rows × {len(df.columns)} columns)"
+                    f"{file} loaded " f"({len(df)} rows × {len(df.columns)} columns)"
                 )
 
-            except Exception as e:
+            except (OSError, ValueError, ImportError) as e:
 
                 logger.error(f"Error loading {file}")
 

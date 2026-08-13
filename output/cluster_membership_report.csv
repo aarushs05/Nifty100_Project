@@ -1,0 +1,110 @@
+company_id,company_name,broad_sector,sub_sector,market_cap_category,cluster_id,cluster_name,distance_from_centroid
+RELIANCE,"Reliance Industries Ltd
+",Energy,Conglomerates,Large Cap,0,Diversified Core Compounders,0.2306725854406335
+SHREECEM,Shree Cement Ltd,Materials,Cement,Large Cap,0,Diversified Core Compounders,0.2576328651277497
+TCS,Tata Consultancy Services Ltd,Information Technology,IT Services,Large Cap,0,Diversified Core Compounders,0.3162875223246837
+MARUTI,Maruti Suzuki India Ltd,Consumer Discretionary,Automobiles,Mid Cap,0,Diversified Core Compounders,0.3406343154825675
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Materials,Paints & Coatings,Large Cap,0,Diversified Core Compounders,0.3705887515051793
+INFY,Infosys Ltd,Information Technology,IT Services,Large Cap,0,Diversified Core Compounders,0.3787753600111304
+GAIL,GAIL (India) Ltd,Energy,Gas Distribution,Large Cap,0,Diversified Core Compounders,0.3817623078192916
+ATGL,Adani Total Gas Ltd,Energy,Gas Distribution,Large Cap,0,Diversified Core Compounders,0.4057424045582036
+PIDILITIND,Pidilite Industries Ltd,Materials,Specialty Chemicals,Large Cap,0,Diversified Core Compounders,0.4502036149960657
+HCLTECH,HCL Technologies Ltd,Information Technology,IT Services,Large Cap,0,Diversified Core Compounders,0.4617963506049843
+NTPC,NTPC Ltd,Energy,Power & Utilities,Large Cap,0,Diversified Core Compounders,0.4855550918087192
+EICHERMOT,Eicher Motors Ltd,Consumer Discretionary,Two Wheelers,Large Cap,0,Diversified Core Compounders,0.495375867976251
+BPCL,Bharat Petroleum Corporation Ltd,Energy,Oil & Gas Refining,Large Cap,0,Diversified Core Compounders,0.5364960852645301
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Healthcare,Healthcare,Large Cap,0,Diversified Core Compounders,0.5708451249576539
+ONGC,Oil & Natural Gas Corpn Ltd,Energy,Oil & Gas Exploration,Large Cap,0,Diversified Core Compounders,0.5819440308516081
+NESTLEIND,Nestle India Ltd,Consumer Staples,Food Products,Large Cap,0,Diversified Core Compounders,0.583621218817258
+IOC,"Indian Oil Corporation
+",Energy,Oil & Gas Refining,Mid Cap,0,Diversified Core Compounders,0.5848213029430599
+TATAMOTORS,Tata Motors Ltd,Consumer Discretionary,Automobiles,Large Cap,0,Diversified Core Compounders,0.5887897929328695
+ABB,Abbott India Ltd,Industrials,Capital Goods,Large Cap,0,Diversified Core Compounders,0.6051137013209037
+BAJAJ-AUTO,Bajaj Auto Ltd,Consumer Discretionary,Two Wheelers,Large Cap,0,Diversified Core Compounders,0.6109920893799506
+TECHM,Tech Mahindra Ltd,Information Technology,IT Services,Large Cap,0,Diversified Core Compounders,0.6186743029740156
+TATASTEEL,"Tata Steel Ltd
+",Materials,Steel,Mid Cap,0,Diversified Core Compounders,0.6253911711155995
+MOTHERSON,Samvardhana Motherson International Ltd,Consumer Discretionary,Auto Ancillaries,Large Cap,0,Diversified Core Compounders,0.6454676641822851
+JSWSTEEL,JSW Steel Ltd,Materials,Steel,Large Cap,0,Diversified Core Compounders,0.6610664251983293
+GODREJCP,Godrej Consumer Products Ltd,Consumer Staples,Personal Products,Large Cap,0,Diversified Core Compounders,0.6632195126354925
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Healthcare,Pharmaceuticals,Large Cap,0,Diversified Core Compounders,0.7281173143950439
+DIVISLAB,Divis Laboratories Ltd,Healthcare,Pharmaceuticals,Large Cap,0,Diversified Core Compounders,0.7340305603399782
+LT,Larsen & Toubro Ltd,Industrials,Engineering & Construction,Large Cap,0,Diversified Core Compounders,0.7619544619252977
+GRASIM,Grasim Industries Ltd,Industrials,Diversified Industrials,Mid Cap,0,Diversified Core Compounders,0.7728245934047567
+M&M,"Mahindra & Mahindra Ltd
+",Consumer Discretionary,Automobiles,Large Cap,0,Diversified Core Compounders,0.8301398681126726
+ITC,"ITC Ltd
+",Consumer Staples,Diversified FMCG,Large Cap,0,Diversified Core Compounders,0.8644168645870098
+TATAPOWER,"Tata Power Company Ltd
+",Energy,Power & Utilities,Mid Cap,0,Diversified Core Compounders,0.875483677535738
+AMBUJACEM,Ambuja Cements Ltd,Materials,Cement,Large Cap,0,Diversified Core Compounders,0.8760867064174133
+DABUR,Dabur India Ltd,Consumer Staples,Personal Products,Large Cap,0,Diversified Core Compounders,0.8777892448308139
+NAUKRI,Info Edge (India) Ltd,Communication Services,Internet & Platforms,Large Cap,0,Diversified Core Compounders,0.8934249991746285
+HAVELLS,Havells India Ltd,Industrials,Consumer Electricals,Large Cap,0,Diversified Core Compounders,0.9533470480329146
+BOSCHLTD,Bosch Ltd,Consumer Discretionary,Auto Ancillaries,Large Cap,0,Diversified Core Compounders,0.955458623554618
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Healthcare,Pharmaceuticals,Large Cap,0,Diversified Core Compounders,1.0934958551991298
+ADANIPOWER,Adani Power Ltd,Energy,Power & Utilities,Large Cap,0,Diversified Core Compounders,1.110476929935781
+TVSMOTOR,TVS Motor Company Ltd,Consumer Discretionary,Two Wheelers,Large Cap,0,Diversified Core Compounders,1.2455061098683455
+DRREDDY,Dr Reddys Laboratories Ltd,Healthcare,Pharmaceuticals,Mid Cap,0,Diversified Core Compounders,1.2603741053099191
+JINDALSTEL,Jindal Steel & Power Ltd,Materials,Steel,Large Cap,0,Diversified Core Compounders,1.3437620155231604
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Consumer Discretionary,Travel & Tourism,Mid Cap,0,Diversified Core Compounders,1.3489018457872466
+ADANIENSOL,Adani Energy Solutions Ltd,Energy,Power & Utilities,Large Cap,0,Diversified Core Compounders,1.3524703029710148
+DMART,Avenue Supermarts Ltd,Consumer Discretionary,Retail,Large Cap,0,Diversified Core Compounders,1.369450967763177
+ADANIENT,Adani Enterprises Ltd,Industrials,Conglomerates,Large Cap,0,Diversified Core Compounders,1.3741613293477315
+JSWENERGY,JSW Energy Ltd,Energy,Power & Utilities,Mid Cap,0,Diversified Core Compounders,1.3834978574398624
+SIEMENS,Siemens Ltd,Industrials,Capital Goods,Large Cap,0,Diversified Core Compounders,1.410466724139039
+TITAN,"Titan Company Ltd
+",Consumer Discretionary,Gems & Jewellery,Large Cap,0,Diversified Core Compounders,1.5330848764502012
+BRITANNIA,Britannia Industries Ltd,Consumer Staples,Food Products,Large Cap,0,Diversified Core Compounders,1.5921454288894663
+TATACONSUM,Tata Consumer Products Ltd,Consumer Staples,Food & Beverages,Large Cap,0,Diversified Core Compounders,1.7453287957450718
+NHPC,"NHPC Ltd
+",Energy,Power & Utilities,Large Cap,0,Diversified Core Compounders,2.0025442940388616
+SBILIFE,SBI Life Insurance Company Ltd,Financials,Life Insurance,Large Cap,0,Diversified Core Compounders,2.039235947065759
+LODHA,Macrotech Developers Ltd,Real Estate,Real Estate,Large Cap,0,Diversified Core Compounders,2.0986388428181018
+LICI,Life Insurance Corporation of India,Financials,Life Insurance,Large Cap,0,Diversified Core Compounders,2.110572495927981
+BHEL,"Bharat Heavy Electricals Limited
+",Industrials,Capital Goods,Large Cap,0,Diversified Core Compounders,2.378031554492871
+DLF,DLF Ltd,Real Estate,Real Estate,Large Cap,0,Diversified Core Compounders,2.436386513504101
+LTIM,LTIMindtree Ltd,Information Technology,IT Services,Large Cap,0,Diversified Core Compounders,2.661804172492685
+TRENT,Trent Ltd,Consumer Discretionary,Retail,Large Cap,0,Diversified Core Compounders,3.4582868552060844
+ICICIBANK,ICICI Bank Ltd,Financials,Private Banks,Large Cap,1,Financial Growth & Leverage,0.5654899043951935
+HDFCBANK,HDFC Bank Ltd,Financials,Private Banks,Large Cap,1,Financial Growth & Leverage,0.6041682288273544
+INDUSINDBK,IndusInd Bank Ltd,Financials,Private Banks,Large Cap,1,Financial Growth & Leverage,0.6390701789139384
+AXISBANK,Axis Bank Ltd,Financials,Private Banks,Large Cap,1,Financial Growth & Leverage,0.9138126007259764
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Financials,Consumer Finance,Large Cap,1,Financial Growth & Leverage,0.9202641559021764
+BAJAJFINSV,Bajaj Finserv Ltd,Financials,Diversified Financials,Large Cap,1,Financial Growth & Leverage,0.9736857674088536
+SBIN,State Bank of India,Financials,Public Sector Banks,Large Cap,1,Financial Growth & Leverage,1.0046481622802648
+PFC,Power Finance Corporation Ltd,Financials,Speciality Finance,Large Cap,1,Financial Growth & Leverage,1.294046410657178
+PNB,Punjab National Bank,Financials,Public Sector Banks,Large Cap,1,Financial Growth & Leverage,1.2961061132593388
+SHRIRAMFIN,"Shriram Finance Ltd
+",Financials,Consumer Finance,Large Cap,1,Financial Growth & Leverage,1.3357677238233991
+BAJFINANCE,Bajaj Finance Ltd,Financials,Consumer Finance,Large Cap,1,Financial Growth & Leverage,1.5646618088971116
+BANKBARODA,Bank of Baroda,Financials,Public Sector Banks,Large Cap,1,Financial Growth & Leverage,1.8590211213932544
+IRFC,Indian Railway Finance Corporation Ltd,Financials,Speciality Finance,Large Cap,1,Financial Growth & Leverage,1.9109076615832736
+RECLTD,REC Ltd,Financials,Speciality Finance,Large Cap,1,Financial Growth & Leverage,2.0615103994298054
+ADANIGREEN,Adani Green Energy Ltd,Energy,Renewable Energy,Large Cap,1,Financial Growth & Leverage,2.538978680813811
+CANBK,Canara Bank,Financials,Public Sector Banks,Large Cap,1,Financial Growth & Leverage,2.7669277143562643
+BEL,Bharat Electronics Ltd,Industrials,Defence Electronics,Large Cap,2,Defense & Capital Goods Leaders,0.761122775987781
+HAL,Hindustan Aeronautics Ltd,Industrials,Defence & Aerospace,Large Cap,2,Defense & Capital Goods Leaders,0.761122775987781
+CIPLA,"Cipla Ltd
+",Healthcare,Pharmaceuticals,Large Cap,3,Healthcare Outlier,0.0
+HINDALCO,Hindalco Industries Ltd,Materials,Metals & Mining,Large Cap,4,High-Quality Leaders,0.6201104486206042
+HINDUNILVR,"Hindustan Unilever Ltd
+",Consumer Staples,FMCG,Mid Cap,4,High-Quality Leaders,0.7367190324048488
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Financials,General Insurance,Large Cap,4,High-Quality Leaders,0.7454315178082027
+JIOFIN,Jio Financial Services Ltd,Financials,Diversified Financials,Mid Cap,4,High-Quality Leaders,0.8291069183418963
+COALINDIA,Coal India Ltd,Materials,Mining & Metals,Large Cap,4,High-Quality Leaders,1.136024941015362
+BHARTIARTL,Bharti Airtel Ltd,Communication Services,Telecommunications,Large Cap,4,High-Quality Leaders,1.3009544592459965
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Financials,Private Banks,Large Cap,4,High-Quality Leaders,1.3380020800525552
+HDFCLIFE,HDFC Life Insurance Company Ltd,Financials,Life Insurance,Large Cap,4,High-Quality Leaders,1.3472118836217934
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Industrials,Infrastructure,Large Cap,4,High-Quality Leaders,1.3916359578919475
+POWERGRID,Power Grid Corporation of India Ltd,Energy,Power Transmission,Large Cap,4,High-Quality Leaders,1.5326856886288984
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Consumer Discretionary,Two Wheelers,Large Cap,4,High-Quality Leaders,1.7197987343449042
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Financials,Life Insurance,Large Cap,4,High-Quality Leaders,2.2999357561390377
+INDIGO,Interglobe Aviation Ltd,Consumer Discretionary,Airlines,Large Cap,4,High-Quality Leaders,2.4362693401227955
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Financials,Holding Companies,Large Cap,4,High-Quality Leaders,2.4543684807581987

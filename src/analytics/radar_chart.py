@@ -62,9 +62,7 @@ def load_data(company_id="TCS", year=2024):
     company = df[df["company_id"] == company_id]
 
     if company.empty:
-        raise ValueError(
-            f"{company_id} not found for year {year}"
-        )
+        raise ValueError(f"{company_id} not found for year {year}")
 
     sector = company.iloc[0]["broad_sector"]
 
@@ -80,39 +78,24 @@ def create_radar(company_id="TCS", year=2024):
     peer_avg = peers.mean(numeric_only=True)
 
     labels = [
-
         "ROE",
-
         "ROCE",
-
         "Net Margin",
-
         "Quality",
-
     ]
 
     company_values = [
-
         company["return_on_equity_pct"],
-
         company["return_on_capital_employed_pct"],
-
         company["net_profit_margin_pct"],
-
         company["composite_quality_score"],
-
     ]
 
     peer_values = [
-
         peer_avg["return_on_equity_pct"],
-
         peer_avg["return_on_capital_employed_pct"],
-
         peer_avg["net_profit_margin_pct"],
-
         peer_avg["composite_quality_score"],
-
     ]
 
     # Close polygon
@@ -128,7 +111,7 @@ def create_radar(company_id="TCS", year=2024):
 
     angles += angles[:1]
 
-    fig, ax = plt.subplots(
+    _, ax = plt.subplots(
         figsize=(7, 7),
         subplot_kw={"polar": True},
     )

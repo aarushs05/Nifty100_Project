@@ -1,6 +1,5 @@
-import streamlit as st
-import pandas as pd
 import plotly.express as px
+import streamlit as st
 
 from src.dashboard.utils.db import get_dashboard_data
 
@@ -29,28 +28,16 @@ def show():
 
     sectors = sorted(df["broad_sector"].dropna().unique())
 
-    sector = st.selectbox(
-        "Sector",
-        ["All"] + sectors
-    )
+    sector = st.selectbox("Sector", ["All"] + sectors)
 
     if sector != "All":
         df = df[df["broad_sector"] == sector]
 
-    search = st.text_input(
-        "Search Company"
-    )
+    search = st.text_input("Search Company")
 
     if search:
 
-        df = df[
-            df["company_name"]
-            .str.contains(
-                search,
-                case=False,
-                na=False
-            )
-        ]
+        df = df[df["company_name"].str.contains(search, case=False, na=False)]
 
     # =====================================================
     # KPI Cards
@@ -58,25 +45,13 @@ def show():
 
     c1, c2, c3, c4 = st.columns(4)
 
-    c1.metric(
-        "Companies",
-        len(df)
-    )
+    c1.metric("Companies", len(df))
 
-    c2.metric(
-        "Average ROE",
-        f"{df['return_on_equity_pct'].mean():.2f}%"
-    )
+    c2.metric("Average ROE", f"{df['return_on_equity_pct'].mean():.2f}%")
 
-    c3.metric(
-        "Average ROCE",
-        f"{df['return_on_capital_employed_pct'].mean():.2f}%"
-    )
+    c3.metric("Average ROCE", f"{df['return_on_capital_employed_pct'].mean():.2f}%")
 
-    c4.metric(
-        "Average Quality",
-        f"{df['composite_quality_score'].mean():.2f}"
-    )
+    c4.metric("Average Quality", f"{df['composite_quality_score'].mean():.2f}")
 
     # =====================================================
     # Quality Distribution
@@ -87,21 +62,12 @@ def show():
     st.subheader("⭐ Quality Score Distribution")
 
     fig1 = px.histogram(
-        df,
-        x="composite_quality_score",
-        nbins=20,
-        color_discrete_sequence=["royalblue"]
+        df, x="composite_quality_score", nbins=20, color_discrete_sequence=["royalblue"]
     )
 
-    fig1.update_layout(
-        height=500
-    )
+    fig1.update_layout(height=500)
 
-    st.plotly_chart(
-        fig1,
-        use_container_width=True,
-        key="reports_quality"
-    )
+    st.plotly_chart(fig1, use_container_width=True, key="reports_quality")
 
     # =====================================================
     # ROE vs ROCE
@@ -117,18 +83,12 @@ def show():
         y="return_on_capital_employed_pct",
         color="composite_quality_score",
         size="composite_quality_score",
-        hover_name="company_name"
-)
-
-    fig2.update_layout(
-        height=550
+        hover_name="company_name",
     )
 
-    st.plotly_chart(
-        fig2,
-        use_container_width=True,
-        key="reports_scatter"
-    )
+    fig2.update_layout(height=550)
+
+    st.plotly_chart(fig2, use_container_width=True, key="reports_scatter")
 
     # =====================================================
     # Top Companies
@@ -138,28 +98,19 @@ def show():
 
     st.subheader("🏆 Top 20 Companies")
 
-    top = df.sort_values(
-        "composite_quality_score",
-        ascending=False
-    ).head(20)
+    top = df.sort_values("composite_quality_score", ascending=False).head(20)
 
     fig3 = px.bar(
         top,
         x="company_name",
         y="composite_quality_score",
         color="composite_quality_score",
-        text="composite_quality_score"
+        text="composite_quality_score",
     )
 
-    fig3.update_layout(
-        height=550
-    )
+    fig3.update_layout(height=550)
 
-    st.plotly_chart(
-        fig3,
-        use_container_width=True,
-        key="reports_top"
-    )
+    st.plotly_chart(fig3, use_container_width=True, key="reports_top")
 
     # =====================================================
     # Company Report Table
@@ -170,25 +121,17 @@ def show():
     st.subheader("📋 Company Report")
 
     report = df[
-    [
-        "company_name",
-        "broad_sector",
-        "return_on_equity_pct",
-        "return_on_capital_employed_pct",
-        "free_cash_flow_cr",
-        "composite_quality_score"
-    ]
+        [
+            "company_name",
+            "broad_sector",
+            "return_on_equity_pct",
+            "return_on_capital_employed_pct",
+            "free_cash_flow_cr",
+            "composite_quality_score",
+        ]
+    ].sort_values("composite_quality_score", ascending=False)
 
-    ].sort_values(
-        "composite_quality_score",
-        ascending=False
-    )
-
-    st.dataframe(
-        report,
-        use_container_width=True,
-        hide_index=True
-    )
+    st.dataframe(report, use_container_width=True, hide_index=True)
 
     # =====================================================
     # Download CSV
@@ -204,7 +147,7 @@ def show():
         label="⬇️ Download Company Report (CSV)",
         data=csv,
         file_name="nifty100_company_report.csv",
-        mime="text/csv"
+        mime="text/csv",
     )
 
     # =====================================================
@@ -232,10 +175,7 @@ def show():
 
     with col2:
 
-        st.metric(
-            "Quality Score",
-            f"{winner['composite_quality_score']:.2f}"
-        )
+        st.metric("Quality Score", f"{winner['composite_quality_score']:.2f}")
 
     # =====================================================
     # Summary Statistics
@@ -247,10 +187,7 @@ def show():
 
     summary = report.describe().T
 
-    st.dataframe(
-        summary,
-        use_container_width=True
-    )
+    st.dataframe(summary, use_container_width=True)
 
     # =====================================================
     # Footer
@@ -258,6 +195,4 @@ def show():
 
     st.divider()
 
-    st.caption(
-        "Nifty 100 Analytics Dashboard • Sprint 4 • Reports & Downloads"
-    )
+    st.caption("Nifty 100 Analytics Dashboard • Sprint 4 • Reports & Downloads")

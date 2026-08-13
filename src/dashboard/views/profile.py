@@ -1,20 +1,18 @@
-from logging import root
-
-import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import streamlit as st
 
 from src.dashboard.utils.db import (
-    get_companies,
-    get_company_profile,
-    get_ratios,
     get_analysis,
-    get_pl,
     get_bs,
     get_cf,
+    get_companies,
+    get_company_profile,
     get_market_cap,
+    get_pl,
     get_pros_cons,
+    get_ratios,
     get_reports,
 )
 
@@ -33,15 +31,9 @@ def show():
         st.error("No companies found.")
         return
 
-    company = st.selectbox(
-        "Select Company",
-        companies["company_name"].tolist()
-    )
+    company = st.selectbox("Select Company", companies["company_name"].tolist())
 
-    company_id = companies.loc[
-        companies["company_name"] == company,
-        "id"
-    ].iloc[0]
+    company_id = companies.loc[companies["company_name"] == company, "id"].iloc[0]
 
     # =====================================================
     # Load Data
@@ -108,28 +100,16 @@ def show():
     c1, c2, c3, c4 = st.columns(4)
 
     with c1:
-        st.metric(
-            "Book Value",
-            f"{profile['book_value']:,.2f}"
-        )
+        st.metric("Book Value", f"{profile['book_value']:,.2f}")
 
     with c2:
-        st.metric(
-            "Face Value",
-            f"{profile['face_value']:,.2f}"
-        )
+        st.metric("Face Value", f"{profile['face_value']:,.2f}")
 
     with c3:
-        st.metric(
-            "ROE %",
-            f"{profile['roe_percentage']:.2f}"
-        )
+        st.metric("ROE %", f"{profile['roe_percentage']:.2f}")
 
     with c4:
-        st.metric(
-            "ROCE %",
-            f"{profile['roce_percentage']:.2f}"
-        )
+        st.metric("ROCE %", f"{profile['roce_percentage']:.2f}")
 
     # =====================================================
     # Financial Performance
@@ -144,12 +124,7 @@ def show():
         fig = go.Figure()
 
         fig.add_trace(
-            go.Scatter(
-                x=pl["year"],
-                y=pl["sales"],
-                mode="lines+markers",
-                name="Sales"
-            )
+            go.Scatter(x=pl["year"], y=pl["sales"], mode="lines+markers", name="Sales")
         )
 
         fig.add_trace(
@@ -157,7 +132,7 @@ def show():
                 x=pl["year"],
                 y=pl["net_profit"],
                 mode="lines+markers",
-                name="Net Profit"
+                name="Net Profit",
             )
         )
 
@@ -166,30 +141,16 @@ def show():
             xaxis_title="Year",
             yaxis_title="₹ Crore",
             hovermode="x unified",
-            height=500
+            height=500,
         )
 
-        st.plotly_chart(
-            fig,
-            use_container_width=True
-        )
+        st.plotly_chart(fig, use_container_width=True)
 
-        fig2 = px.bar(
-            pl,
-            x="year",
-            y="eps",
-            text="eps",
-            title="EPS Trend"
-        )
+        fig2 = px.bar(pl, x="year", y="eps", text="eps", title="EPS Trend")
 
-        fig2.update_layout(
-            height=450
-        )
+        fig2.update_layout(height=450)
 
-        st.plotly_chart(
-            fig2,
-            use_container_width=True
-        )
+        st.plotly_chart(fig2, use_container_width=True)
 
     else:
 
@@ -216,7 +177,7 @@ def show():
                     x=ratios["year"],
                     y=ratios["return_on_equity_pct"],
                     mode="lines+markers",
-                    name="ROE"
+                    name="ROE",
                 )
             )
 
@@ -225,7 +186,7 @@ def show():
                     x=ratios["year"],
                     y=ratios["return_on_capital_employed_pct"],
                     mode="lines+markers",
-                    name="ROCE"
+                    name="ROCE",
                 )
             )
 
@@ -234,13 +195,10 @@ def show():
                 xaxis_title="Year",
                 yaxis_title="Percentage",
                 hovermode="x unified",
-                height=450
+                height=450,
             )
 
-            st.plotly_chart(
-                fig,
-                use_container_width=True
-            )
+            st.plotly_chart(fig, use_container_width=True)
 
         with col2:
 
@@ -248,9 +206,7 @@ def show():
 
             fig.add_trace(
                 go.Bar(
-                    x=ratios["year"],
-                    y=ratios["debt_to_equity"],
-                    name="Debt to Equity"
+                    x=ratios["year"], y=ratios["debt_to_equity"], name="Debt to Equity"
                 )
             )
 
@@ -258,13 +214,10 @@ def show():
                 title="Debt to Equity",
                 xaxis_title="Year",
                 yaxis_title="Ratio",
-                height=450
+                height=450,
             )
 
-            st.plotly_chart(
-                fig,
-                use_container_width=True
-            )
+            st.plotly_chart(fig, use_container_width=True)
 
     else:
 
@@ -285,15 +238,12 @@ def show():
                 x="year",
                 y="net_profit_margin_pct",
                 markers=True,
-                title="Net Profit Margin"
+                title="Net Profit Margin",
             )
 
             fig.update_layout(height=420)
 
-            st.plotly_chart(
-                fig,
-                use_container_width=True
-            )
+            st.plotly_chart(fig, use_container_width=True)
 
         with col2:
 
@@ -302,15 +252,12 @@ def show():
                 x="year",
                 y="operating_profit_margin_pct",
                 markers=True,
-                title="Operating Profit Margin"
+                title="Operating Profit Margin",
             )
 
             fig.update_layout(height=420)
 
-            st.plotly_chart(
-                fig,
-                use_container_width=True
-            )
+            st.plotly_chart(fig, use_container_width=True)
 
         # =====================================================
     # Balance Sheet Overview
@@ -329,18 +276,12 @@ def show():
             fig = go.Figure()
 
             fig.add_trace(
-                go.Bar(
-                    x=bs["year"],
-                    y=bs["total_assets"],
-                    name="Total Assets"
-                )
+                go.Bar(x=bs["year"], y=bs["total_assets"], name="Total Assets")
             )
 
             fig.add_trace(
                 go.Bar(
-                    x=bs["year"],
-                    y=bs["total_liabilities"],
-                    name="Total Liabilities"
+                    x=bs["year"], y=bs["total_liabilities"], name="Total Liabilities"
                 )
             )
 
@@ -349,13 +290,10 @@ def show():
                 title="Assets vs Liabilities",
                 xaxis_title="Year",
                 yaxis_title="₹ Crore",
-                height=450
+                height=450,
             )
 
-            st.plotly_chart(
-                fig,
-                use_container_width=True
-            )
+            st.plotly_chart(fig, use_container_width=True)
 
         with col2:
 
@@ -366,7 +304,7 @@ def show():
                     x=bs["year"],
                     y=bs["equity_capital"],
                     mode="lines+markers",
-                    name="Equity Capital"
+                    name="Equity Capital",
                 )
             )
 
@@ -375,7 +313,7 @@ def show():
                     x=bs["year"],
                     y=bs["borrowings"],
                     mode="lines+markers",
-                    name="Borrowings"
+                    name="Borrowings",
                 )
             )
 
@@ -383,13 +321,10 @@ def show():
                 title="Equity vs Borrowings",
                 xaxis_title="Year",
                 yaxis_title="₹ Crore",
-                height=450
+                height=450,
             )
 
-            st.plotly_chart(
-                fig,
-                use_container_width=True
-            )
+            st.plotly_chart(fig, use_container_width=True)
 
     else:
 
@@ -408,27 +343,15 @@ def show():
         fig = go.Figure()
 
         fig.add_trace(
-            go.Bar(
-                x=cf["year"],
-                y=cf["operating_activity"],
-                name="Operating"
-            )
+            go.Bar(x=cf["year"], y=cf["operating_activity"], name="Operating")
         )
 
         fig.add_trace(
-            go.Bar(
-                x=cf["year"],
-                y=cf["investing_activity"],
-                name="Investing"
-            )
+            go.Bar(x=cf["year"], y=cf["investing_activity"], name="Investing")
         )
 
         fig.add_trace(
-            go.Bar(
-                x=cf["year"],
-                y=cf["financing_activity"],
-                name="Financing"
-            )
+            go.Bar(x=cf["year"], y=cf["financing_activity"], name="Financing")
         )
 
         fig.update_layout(
@@ -436,13 +359,10 @@ def show():
             title="Cash Flow Activities",
             xaxis_title="Year",
             yaxis_title="₹ Crore",
-            height=500
+            height=500,
         )
 
-        st.plotly_chart(
-            fig,
-            use_container_width=True
-        )
+        st.plotly_chart(fig, use_container_width=True)
 
     else:
 
@@ -462,25 +382,13 @@ def show():
 
         c1, c2, c3, c4 = st.columns(4)
 
-        c1.metric(
-            "Market Cap",
-            f"{latest['market_cap_crore']:,.0f} Cr"
-        )
+        c1.metric("Market Cap", f"{latest['market_cap_crore']:,.0f} Cr")
 
-        c2.metric(
-            "Enterprise Value",
-            f"{latest['enterprise_value_crore']:,.0f} Cr"
-        )
+        c2.metric("Enterprise Value", f"{latest['enterprise_value_crore']:,.0f} Cr")
 
-        c3.metric(
-            "P/E Ratio",
-            f"{latest['pe_ratio']:.2f}"
-        )
+        c3.metric("P/E Ratio", f"{latest['pe_ratio']:.2f}")
 
-        c4.metric(
-            "P/B Ratio",
-            f"{latest['pb_ratio']:.2f}"
-        )
+        c4.metric("P/B Ratio", f"{latest['pb_ratio']:.2f}")
 
     else:
 
@@ -524,16 +432,11 @@ def show():
 
     if not reports.empty:
 
-        reports = reports.sort_values(
-            "Year",
-            ascending=False
-        )
+        reports = reports.sort_values("Year", ascending=False)
 
         for _, row in reports.iterrows():
 
-            st.markdown(
-                f"**{row['Year']}**  \n{row['Annual_Report']}"
-            )
+            st.markdown(f"**{row['Year']}**  \n{row['Annual_Report']}")
 
     else:
 
@@ -546,35 +449,19 @@ def show():
 
     with st.expander("📑 Profit & Loss"):
 
-        st.dataframe(
-            pl,
-            use_container_width=True,
-            hide_index=True
-        )
+        st.dataframe(pl, use_container_width=True, hide_index=True)
 
     with st.expander("🏦 Balance Sheet"):
 
-        st.dataframe(
-            bs,
-            use_container_width=True,
-            hide_index=True
-        )
+        st.dataframe(bs, use_container_width=True, hide_index=True)
 
     with st.expander("💰 Cash Flow"):
 
-        st.dataframe(
-            cf,
-            use_container_width=True,
-            hide_index=True
-        )
+        st.dataframe(cf, use_container_width=True, hide_index=True)
 
     with st.expander("📊 Financial Ratios"):
 
-        st.dataframe(
-            ratios,
-            use_container_width=True,
-            hide_index=True
-        )
+        st.dataframe(ratios, use_container_width=True, hide_index=True)
         # =====================================================
     # Analysis Summary
     # =====================================================
@@ -585,11 +472,7 @@ def show():
 
     if not analysis.empty:
 
-        st.dataframe(
-            analysis,
-            use_container_width=True,
-            hide_index=True
-        )
+        st.dataframe(analysis, use_container_width=True, hide_index=True)
 
     else:
 
@@ -603,6 +486,5 @@ def show():
 
     st.divider()
 
-st.caption(
-    "Nifty 100 Analytics Dashboard • Sprint 5 • Company Profile"
-)
+
+st.caption("Nifty 100 Analytics Dashboard • Sprint 5 • Company Profile")

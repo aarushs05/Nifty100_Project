@@ -68,13 +68,9 @@ def apply_filters(df, cfg):
 
     f = cfg["filters"]
 
-    df = df[
-        df["return_on_equity_pct"] >= f["roe"]["min"]
-    ]
+    df = df[df["return_on_equity_pct"] >= f["roe"]["min"]]
 
-    df = df[
-        df["return_on_capital_employed_pct"] >= f["roce"]["min"]
-    ]
+    df = df[df["return_on_capital_employed_pct"] >= f["roce"]["min"]]
 
     df = df[
         (df["broad_sector"] == "Financial")
@@ -89,21 +85,13 @@ def calculate_score(df):
     df = df.copy()
 
     df["score"] = (
-
         df["return_on_equity_pct"] * 0.30
-
         + df["return_on_capital_employed_pct"] * 0.30
-
         + df["revenue_cagr_3yr"].fillna(0) * 0.20
-
         + df["eps_cagr_3yr"].fillna(0) * 0.20
-
     )
 
-    return df.sort_values(
-        "score",
-        ascending=False
-    )
+    return df.sort_values("score", ascending=False)
 
 
 def main():
@@ -118,10 +106,7 @@ def main():
 
     ranked = calculate_score(screened)
 
-    ranked.to_excel(
-        OUTPUT / "screener_output.xlsx",
-        index=False
-    )
+    ranked.to_excel(OUTPUT / "screener_output.xlsx", index=False)
 
     print("\nTop 20 Stocks\n")
 

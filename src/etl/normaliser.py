@@ -7,7 +7,6 @@ def normalize_company_id(value):
         return None
     return str(value).strip().upper()
 
-import pandas as pd
 
 def normalize_text(value):
     if pd.isna(value):
@@ -29,23 +28,14 @@ def normalize_text(value):
 
     return text
 
+
 def normalize_numeric(value):
     """Convert values to numeric where possible."""
     return pd.to_numeric(value, errors="coerce")
 
-def normalize_numeric(value):
-    return pd.to_numeric(value, errors="coerce")
 
-def normalize_year(value):
-    """
-    Extract a 4-digit year from different formats.
-    Examples:
-    Dec 2012 -> 2012
-    Mar 2014 -> 2014
-    2024 -> 2024
-    """
 import re
-import pandas as pd
+
 
 def normalize_year(value):
     """
