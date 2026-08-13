@@ -5,6 +5,8 @@ Valuation Analytics
 
 from pathlib import Path
 
+import pandas as pd
+
 ROOT = Path(__file__).resolve().parents[2]
 
 OUTPUT = ROOT / "output"
@@ -14,7 +16,6 @@ OUTPUT.mkdir(exist_ok=True)
 class ValuationAnalysis:
 
     def __init__(self, scorecard):
-
         self.scorecard = scorecard.copy()
 
     def generate(self):
@@ -42,38 +43,95 @@ class ValuationAnalysis:
         # Top Companies
         # -----------------------------------------
 
-        top = df.sort_values("valuation_score", ascending=False).head(20)
+        top = df.sort_values(
+            "valuation_score",
+            ascending=False,
+        ).head(20)
 
         # -----------------------------------------
         # Undervalued
         # -----------------------------------------
 
-        undervalued = df.sort_values(["pe_ratio", "pb_ratio"], ascending=True).head(20)
+        undervalued = df.sort_values(
+            ["pe_ratio", "pb_ratio"],
+            ascending=True,
+        ).head(20)
 
         # -----------------------------------------
         # Overvalued
         # -----------------------------------------
 
-        overvalued = df.sort_values(["pe_ratio", "pb_ratio"], ascending=False).head(20)
+        overvalued = df.sort_values(
+            ["pe_ratio", "pb_ratio"],
+            ascending=False,
+        ).head(20)
 
         # -----------------------------------------
-        # Save Files
+        # Save Existing CSV Outputs
         # -----------------------------------------
 
-        top.to_csv(OUTPUT / "top_companies.csv", index=False)
+        top.to_csv(
+            OUTPUT / "top_companies.csv",
+            index=False,
+        )
 
-        undervalued.to_csv(OUTPUT / "undervalued_companies.csv", index=False)
+        undervalued.to_csv(
+            OUTPUT / "undervalued_companies.csv",
+            index=False,
+        )
 
-        overvalued.to_csv(OUTPUT / "overvalued_companies.csv", index=False)
+        overvalued.to_csv(
+            OUTPUT / "overvalued_companies.csv",
+            index=False,
+        )
+
+        # -----------------------------------------
+        # D-12 Valuation Summary Excel
+        # -----------------------------------------
+
+        valuation_summary = OUTPUT / "valuation_summary.xlsx"
+
+        with pd.ExcelWriter(
+            valuation_summary,
+            engine="openpyxl",
+        ) as writer:
+
+            top.to_excel(
+                writer,
+                sheet_name="Top Valuation Picks",
+                index=False,
+            )
+
+            undervalued.to_excel(
+                writer,
+                sheet_name="Undervalued",
+                index=False,
+            )
+
+            overvalued.to_excel(
+                writer,
+                sheet_name="Overvalued",
+                index=False,
+            )
+
+            # Complete valuation dataset
+            df.sort_values(
+                "valuation_score",
+                ascending=False,
+            ).to_excel(
+                writer,
+                sheet_name="All Companies",
+                index=False,
+            )
+
+        # -----------------------------------------
+        # Console Output
+        # -----------------------------------------
 
         print()
-
         print("=" * 70)
-
         print("VALUATION ANALYSIS")
-
         print("=" * 70)
-
         print()
 
         print("Top Valuation Picks")
@@ -91,5 +149,11 @@ class ValuationAnalysis:
         )
 
         print()
+        print(f"Valuation summary saved -> {valuation_summary}")
+        print()
 
-        return {"top": top, "undervalued": undervalued, "overvalued": overvalued}
+        return {
+            "top": top,
+            "undervalued": undervalued,
+            "overvalued": overvalued,
+        }

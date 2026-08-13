@@ -2,7 +2,7 @@
 NIFTY 100 ANALYTICS REPORT
 ================================================================================
 
-Generated : 2026-07-22 17:01:46.153515
+Generated : 2026-08-13 19:06:10.300950+00:00
 
 Companies Analysed : 90
 Sectors Analysed   : 10
